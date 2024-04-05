@@ -5,16 +5,28 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Olá Mundo!</div>
+                <div class="card-header">Categoria</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
 
-                    {{ __('You are logged in!') }}
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                        @foreach ($categorias as $value)
+                          <tr>
+                            <th scope="row">{{$value->id}}</th>
+                            <td>{{$value->nome}}</td>
+                          </tr>
+                          @endforeach
+                        </tbody>
+                      </table>
+
                 </div>
             </div>
         </div>

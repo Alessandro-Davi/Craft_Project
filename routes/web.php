@@ -22,4 +22,14 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+
+// CRUD
+
+// LISTAR
+
 Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
+
+// SHOW - GET
+
+// CREATE GET / STORE POST

@@ -8,12 +8,21 @@
                 <div class="card-header">Categoria</div>
 
                 <div class="card-body">
+
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                         {{ session('status') }}
+                    </div>
+                    @endif
+
+                    <a class="btn btn-success" href="{{url('/categoria/create')}}" role="button">Criar</a>
+
                     <table class="table">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
-
+                            <th scope="col"></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -22,6 +31,8 @@
                           <tr>
                             <th scope="row">{{$value->id}}</th>
                             <td>{{$value->nome}}</td>
+                            <td><a class="btn btn-primary" href="{{url('/categoria/' . $value->id)}}" role="button">Visualizar</a></td>
+                            <td><a class="btn btn-warning" href="{{url('/categoria/' . $value->id . '/edit')}}" role="button">Editar</a></td>
                           </tr>
                           @endforeach
                         </tbody>

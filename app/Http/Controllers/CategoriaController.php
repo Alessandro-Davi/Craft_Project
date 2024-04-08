@@ -21,7 +21,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //return view('categoria.create');
+        return view('categoria.create');
     }
 
     /**
@@ -31,20 +31,20 @@ class CategoriaController extends Controller
     {
         //dd($request->all());
 
-        // $messages = [
-        //     'nome.required' => 'O campo :attribute é obrigatório.',
-        // ];
+         $messages = [
+             'nome.required' => 'O campo :attribute é obrigatório.',
+         ];
 
-        // $validated = $request->validate([
-        //     'nome' => 'required|min:5',
-        // ], $messages);
+         $validated = $request->validate([
+             'nome' => 'required|min:5',
+         ], $messages);
 
 
-        // $categoria = new Categoria;
-        // $categoria->nome = $request->nome;
-        // $categoria->save();
+         $categoria = new Categoria;
+        $categoria->nome = $request->nome;
+         $categoria->save();
 
-        // return redirect('categoria')->with('status', 'Categoria Salva com sucesso');
+         return redirect('categoria')->with('status', 'Categoria Salva com sucesso');
 
     }
 
@@ -53,38 +53,34 @@ class CategoriaController extends Controller
      */
     public function show(string $id)
     {
-        // $categoria = Categoria::find($id);
-        // return view('categoria.show', ['categoria' => $categoria]);
+         $categoria = Categoria::find($id);
+         return view('categoria.show', ['categoria' => $categoria]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(string $id)
     {
-        // $categoria = Categoria::find($id);
-        // return view('categoria.edit', ['categoria' => $categoria]);
+         $categoria = Categoria::find($id);
+         return view('categoria.edit', ['categoria' => $categoria]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
        // dd($id);
-        // $messages = [
-        //     'nome.required' => 'O campo :attribute é obrigatório.',
-    // ];
+        $messages = [
+            'nome.required' => 'O campo :attribute é obrigatório.',
+    ];
 
-        // $validated = $request->validate([
-        // 'nome' => 'required|min:5',
-        // ], $messages);
+        $validated = $request->validate([
+        'nome' => 'required|min:5',
+        ], $messages);
 
-        // $categoria = Categoria::find($id);
-        // $categoria->nome = $request->nome;
-        // $categoria->save();
+         $categoria = Categoria::find($id);
+        $categoria->nome = $request->nome;
+         $categoria->save();
 
-        // return redirect('categoria')->with('status', 'Categoria atualizada com sucesso');
+        return redirect('categoria')->with('status', 'Categoria atualizada com sucesso');
 
     }
 

@@ -30,6 +30,22 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
 
-// SHOW - GET
+
 
 // CREATE GET / STORE POST
+Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
+
+// STORE
+
+Route::post('/categoria/create', [CategoriaController::class, 'store'])->name('categoria.store');
+
+
+// SHOW - GET
+Route::get('/categoria/{id}', [CategoriaController::class, 'show'])->name('categoria.show');
+
+// EDIT
+Route::get('/categoria/{id}/edit' , [CategoriaController::class, 'edit'])->name('categoria.edit');
+
+// PUT
+
+Route::put('/categoria/{id}/edit' , [CategoriaController::class, 'update'])->name('categoria.update');

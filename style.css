@@ -1,0 +1,100 @@
+.card{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+   
+footer{
+
+    background-color: black;
+    color:white;
+}
+
+#Face {
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+#Insta {
+
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+#What {
+
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+#Phone{
+
+    margin-right: 10px;
+
+}
+
+.col{
+
+    text-align: center;
+}
+
+.form-control{
+
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+.col-6{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+
+  #number{
+
+    color:white;
+  }
+
+  #titulo{
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+  }
+
+ 
+
+
+
+
+
+ 

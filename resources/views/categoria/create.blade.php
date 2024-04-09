@@ -21,8 +21,8 @@
                     <form method="POST" action="{{url('/categoria/create')}}">
                         @csrf
 
-                        <label for="fname">First name:</label><br>
-                        <input type="text" class="form-control" name="fname"><br><br>
+                        <label for="fname">Nome:</label><br>
+                        <input type="text" class="form-control" name="nome"><br><br>
                         <input type="submit" class="form-control" value="Enviar">
                     </form>
 

@@ -21,8 +21,8 @@
                     <form method="POST" action="{{url('/categoria/' . $categoria->id. '/edit')}}">
                         @csrf
                         @method('PUT')
-                        <label for="fname">First name:</label><br>
-                        <input type="text" class="form-control" value="{{$categoria->nome}} "name="fname"><br><br>
+                        <label for="fname">Nome:</label><br>
+                        <input type="text" class="form-control" value="{{$categoria->nome}} "name="nome"><br><br>
                         <input type="submit" class="form-control" value="Enviar">
                     </form>
 

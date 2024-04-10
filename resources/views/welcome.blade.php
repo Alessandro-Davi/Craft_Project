@@ -3,8 +3,8 @@
 
 
 @section('content')
-
-@foreach ($psotagens as $value)
+<link rel="stylesheet" type="text/css" href="{{ url ('../style.css')  }}" />
+@foreach ($postagens as $value)
 
     <div class="container">
 

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Craft Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url ('../style.css')  }}" />
+    <link rel="stylesheet" type="text/css" href="{{url('./style.css')}}">
   </head>
   <body>
 
 
 
       <div class="text-center">
-        <img src="../img/Logo-Blog.png" width="200" height="200"  alt="Logomarca">
+        <img src="{{url('../img/Logo-Blog.png')}}" width="200" height="200"  alt="Logomarca">
       </div>
 
 
@@ -43,7 +43,7 @@
                             <a class="nav-link" href="#">Cadastrar</a>
                         </li>
                         <li class="nav-item ms-auto">
-                          <img src="../img/boy.png" width="50" height="50" alt="Logomarca">
+                          <img src="./img/boy.png" width="50" height="50" alt="Logomarca">
                         </li>
                     </ul>
 

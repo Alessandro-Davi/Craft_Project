@@ -62,28 +62,28 @@
     <div class="container">
     <div class="card-group row row-cols-4">
       <div class="card border border-dark">
-        <img src="../img/teste1.jpg" class="card-img-top" alt="...">
+        <a href="#"><img src="{{url('./img/Artes.jpg')}}" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Artes</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <img src="../img/teste1.jpg" class="card-img-top" alt="...">
+        <a href="#"><img src="{{url('./img/Mecanica.jpg')}}"  href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Construção</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <img src="../img/teste1.jpg" class="card-img-top" alt="...">
+        <a href="#"><img src="{{url('./img/Decoração.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Decoração</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <img src="../img/teste1.jpg" class="card-img-top" alt="...">
+        <a href="#"><img src="{{url('./img/Eletrônica.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Eletrônica</h5>
           <hr>
@@ -96,28 +96,28 @@
 
     <div class="card-group row row-cols-4">
       <div class="card border border-dark">
-        <img src="../img/teste1.jpg" class="card-img-top" alt="...">
+        <a href="#"><img src="{{url('./img/Costura.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Costura</h5>
          <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <img src="../img/teste1.jpg" class="card-img-top" alt="...">
+        <a href="#"><img src="{{url('./img/Presentes.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Presentes</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <img src="../img/teste1.jpg" class="card-img-top" alt="...">
+        <a href="#"><img src="{{url('./img/quadro.png')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Quadros</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <img src="../img/teste1.jpg" class="card-img-top" alt="...">
+        <a href="#"><img src="{{url('./img/bijuteria.jpeg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Bijuteria</h5>
           <hr>

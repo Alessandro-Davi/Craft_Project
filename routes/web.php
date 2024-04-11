@@ -28,6 +28,17 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
+
+
+
+
+Route::get('/signin',[App\Http\Controllers\loginController::class,'index'])->name('login.index');
+Route::post('/signin',[App\Http\Controllers\loginController::class,'store'])->name('login.store');
+Route::get('/signinout',[App\Http\Controllers\loginController::class,'destroy'])->name('login.destroy');
+
+
+
+
 // CRUD
 
 // LISTAR

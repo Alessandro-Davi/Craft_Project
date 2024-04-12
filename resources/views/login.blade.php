@@ -10,49 +10,39 @@
     <title>login</title>
 </head>
 <body>
-    <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+    
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="">
-			<h1>Create Account</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your email for registration</span>
+			<h1>Crie sua conta</h1>
+			<span>Nome e email para registrar!</span>
 			<input type="text" placeholder="Name" />
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
+			<button>Login in</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="#">
-			<h1>Sign in</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your account</span>
+			<h1>Login in</h1>
+			<span>nome ou email aqui</span>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
+			<a href="#">Esqueceu sua senha?</a>
+			<button>Login in</button>
 		</form>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
-				<button class="ghost" id="signIn">Sign In</button>
+				<h1>Bem vindo de volta!</h1>
+				<p>Para se manter conectado conosco, faça login com suas informações pessoais</p>
+				<button class="ghost" id="signIn">Login in</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp">Sign Up</button>
+				<h1>Salve Parceiro!</h1>
+				<p>Insira seus dados pessoais e comece sua jornada conosco</p>
+				<button class="ghost" id="signUp">Cadastre-se</button>
 			</div>
 		</div>
 	</div>

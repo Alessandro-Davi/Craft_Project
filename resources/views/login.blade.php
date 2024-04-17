@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ asset('login.css') }}" media="screen" />
-    
-    
-    
+    <link rel="stylesheet" type="text/css" href="{{ asset('../public/login.css') }}" media="screen" />
+
     <title>login</title>
 </head>
 <body>
-    
+
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="">
@@ -56,10 +54,10 @@
 		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
 	</p>
 </footer>
-    
+
 </body>
-<script type="text/javascript" src="{{ asset('login.js') }}">
-        
+<script type="text/javascript" src="{{ asset('../public/login.js') }}">
+
 </script>
 </html>
 

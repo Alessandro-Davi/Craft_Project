@@ -39,7 +39,7 @@ Route::get('/signinout',[App\Http\Controllers\LoginController::class,'destroy'])
 
 
 
-// CRUD
+// CRUD CATEGORIA
 
 // LISTAR
 

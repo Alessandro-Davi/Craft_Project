@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Postagem;
+use App\Models\Categoria;
 
 class PostagemController extends Controller
 {
@@ -21,7 +22,8 @@ class PostagemController extends Controller
     */
    public function create()
    {
-       return view('postagem.create');
+        $categorias=Categoria::orderBy('nome', 'ASC')->get();
+       return view('postagem.create', ['categorias' => $categorias]);
    }
 
    /**
@@ -30,6 +32,9 @@ class PostagemController extends Controller
    public function store(Request $request)
    {
        //dd($request->all());
+
+       $user = auth()->user()->id;
+
 
         $messages = [
             'titulo.required' => 'O campo :attribute é obrigatório.',
@@ -43,8 +48,10 @@ class PostagemController extends Controller
 
 
         $postagem = new Postagem;
-       $postagem->titulo = $request->titulo;
-       $postagem->conteudo = $request->conteudo;
+        $postagem->titulo = $request->titulo;
+        $postagem->conteudo = $request->conteudo;
+        $postagem->user_id=$user_id;
+        $postagem->categoria_id=$request->categoria_id;
         $postagem->save();
 
         return redirect('postagem')->with('status', 'Postagem Salva com sucesso');
@@ -71,6 +78,9 @@ class PostagemController extends Controller
    public function update(Request $request, string $id)
    {
       // dd($id);
+
+      $user = auth()->user()->id;
+
       $messages = [
         'titulo.required' => 'O campo :attribute é obrigatório.',
         'conteudo.required' => 'O campo :attribute é obrigatório.',
@@ -84,6 +94,7 @@ class PostagemController extends Controller
         $postagem = Postagem::find($id);
         $postagem->titulo = $request->titulo;
         $postagem->conteudo = $request->conteudo;
+        $postagem->user_id=$user_id;
         $postagem->save();
 
        return redirect('postagem')->with('status', 'Postagem atualizada com sucesso');

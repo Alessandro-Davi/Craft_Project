@@ -21,6 +21,23 @@
                     <form method="POST" action="{{url('/postagem/' . $postagem->id. '/edit')}}">
                         @csrf
                         @method('PUT')
+
+                        <label for="fname">Categoria:</label><br>
+                        <select class="form-control" name="categoria_id">
+
+                        @foreach ($categorias as $value)
+
+                        @if($postagem->categoria_id==$value->id)
+                        <option selected value="{{$value->id}}">{{$value -> nome}}</option>
+                        @else
+                        <option value="{{$value->id}}">{{$value -> nome}}</option>
+                        @endif
+                        @endforeach
+
+                        </select>
+                        <br>
+
+
                         <label for="fname">Titulo:</label><br>
                         <input type="text" class="form-control" value="{{$postagem->titulo}} "name="titulo"><br><br>
                         <label for="fname">Conteúdo:</label><br>

@@ -8,7 +8,9 @@
                 <div class="card-header">Postagem</div>
 
                 <div class="card-body">
+                    <strong>Categoria </strong>          {{$postagem->categoria->nome}} <br>
                     <strong>Titulo: </strong>             {{$postagem->titulo}} <br>
+                    <strong>Autor:  </strong>             {{$postagem->user->name}} <br>
                     <strong>Conteudo: </strong>             {{$postagem->conteudo}} <br>
                     <strong>Criação: </strong>             {{$postagem->created_at}} <br>
                     <strong>Atualização: </strong>      {{$postagem->updated_at}} <br>

@@ -71,7 +71,8 @@ class PostagemController extends Controller
    public function edit(string $id)
    {
         $postagem = Postagem::find($id);
-        return view('postagem.edit', ['postagem' => $postagem]);
+        $categorias=Categoria::orderBy('nome', 'ASC')->get();
+        return view('postagem.edit', ['postagem' => $postagem, 'categorias' => $categorias]);
    }
 
 
@@ -95,6 +96,7 @@ class PostagemController extends Controller
         $postagem->titulo = $request->titulo;
         $postagem->conteudo = $request->conteudo;
         $postagem->user_id=$user_id;
+        $postagem->categoria_id=$request->categoria_id;
         $postagem->save();
 
        return redirect('postagem')->with('status', 'Postagem atualizada com sucesso');

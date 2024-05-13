@@ -18,7 +18,7 @@
             </div>
             @endif
 
-                    <form method="POST" action="{{url('/postagem/' . $postagem->id. '/edit')}}">
+                    <form method="POST" action="{{url('/postagem' . $postagem->id. '/edit')}}">
                         @csrf
                         @method('PUT')
 
@@ -28,9 +28,9 @@
                         @foreach ($categorias as $value)
 
                         @if($postagem->categoria_id==$value->id)
-                        <option selected value="{{$value->id}}">{{$value -> nome}}</option>
+                            <option selected value="{{$value->id}}">{{$value -> nome}}</option>
                         @else
-                        <option value="{{$value->id}}">{{$value -> nome}}</option>
+                            <option value="{{$value->id}}">{{$value -> nome}}</option>
                         @endif
                         @endforeach
 

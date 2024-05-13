@@ -9,7 +9,7 @@
 
     <div class="card-group row row-cols-3">
       <div class="card border border-dark">
-        <img src="{{url ('../img/teste1.jpg')}}" class="card-img-top" alt="...">
+        <img src="{{url ('./img/teste1.jpg')}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">{{$value->titulo}}</h5>
           <hr>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="card border border-dark">
-        <img src="{{url ('../img/teste1.jpg ')}}" class="card-img-top" alt="...">
+        <img src="{{url ('./img/teste1.jpg')}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">{{$value->titulo}}</h5>
           <hr>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="card border border-dark">
-        <img src=" {{url ('../img/teste1.jpg ')}}" class="card-img-top" alt="...">
+        <img src=" {{url ('./img/teste1.jpg')}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">{{$value->titulo}}</h5>
           <hr>

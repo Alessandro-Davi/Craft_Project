@@ -20,11 +20,6 @@
   </div>
 
 
-  <div class="text-center">
-    <img src="./img/Logo-Blog.png" width="400" height="400" alt="Logomarca">
-  </div>
-
-
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
         <form class="d-flex" role="search">
@@ -172,7 +167,7 @@
 
 
     <div class="d-flex justify-content-end">
-      <p> A data está aqui</p>
+      <time class="published" datetime="2015-11-01"> {{ \Carbon\Carbon::parse($value->created_at)->format('d/m/Y h:1:s A')}}</time>
     </div>
 
 

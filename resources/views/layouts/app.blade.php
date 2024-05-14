@@ -35,10 +35,10 @@
                 </ul>
                 <ul class="navbar-nav">
                   <li class="nav-item ">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="{{url ('/login') }}">Login</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Cadastrar</a>
+                    <a class="nav-link" href="{{url ('/register') }}">Cadastrar</a>
                   </li>
                   <li class="nav-item ms-auto">
                     <img src="./img/boy.png" width="50" height="50" alt="Logomarca">
@@ -59,28 +59,28 @@
     <div class="container">
     <div class="card-group row row-cols-4">
       <div class="card border border-dark">
-        <a href="#"><img src="{{url('./img/Artes.jpg')}}" class="card-img-top" alt="..."></a>
+        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Artes.jpg')}}" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Artes</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="#"><img src="{{url('./img/Mecanica.jpg')}}"  href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Mecanica.jpg')}}"  href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Construção</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="#"><img src="{{url('./img/Decoração.jpg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Decoração.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Decoração</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="#"><img src="{{url('./img/Eletrônica.jpg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Eletrônica.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Eletrônica</h5>
           <hr>
@@ -93,28 +93,28 @@
 
     <div class="card-group row row-cols-4">
       <div class="card border border-dark">
-        <a href="#"><img src="{{url('./img/Costura.jpg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Costura.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Costura</h5>
          <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="#"><img src="{{url('./img/Presentes.jpg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Presentes.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Presentes</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="#"><img src="{{url('./img/quadro.png')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/quadro.png')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Quadros</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="#"><img src="{{url('./img/bijuteria.jpeg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/bijuteria.jpeg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Bijuteria</h5>
           <hr>

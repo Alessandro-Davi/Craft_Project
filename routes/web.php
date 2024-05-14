@@ -28,10 +28,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
-
-
-
-
 Route::get('/signin',[App\Http\Controllers\LoginController::class,'index'])->name('login.index');
 Route::post('/signin',[App\Http\Controllers\LoginController::class,'store'])->name('login.store');
 Route::get('/signinout',[App\Http\Controllers\LoginController::class,'destroy'])->name('login.destroy');
@@ -96,3 +92,7 @@ Route::put('/postagem/{id}/edit' , [PostagemController::class, 'update'])->name(
 
 Route::delete('/postagem/{id}' , [PostagemController::class, 'destroy'])->name('postagem.destroy');
 
+
+// BLOG
+
+Route::get('/blog/categria/{id}', [BlogController::class, 'categoriaPostagem'])->name('blog.categoriaPostagem');

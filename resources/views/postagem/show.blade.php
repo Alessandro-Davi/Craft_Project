@@ -12,8 +12,8 @@
                     <strong>Titulo: </strong>             {{$postagem->titulo}} <br>
                     <strong>Autor:  </strong>             {{$postagem->user->name}} <br>
                     <strong>Conteudo: </strong>             {{$postagem->conteudo}} <br>
-                    <strong>Criação: </strong>             {{$postagem->created_at}} <br>
-                    <strong>Atualização: </strong>      {{$postagem->updated_at}} <br>
+                    <strong>Criação: </strong>             {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:1:s A')}} <br>
+                    <strong>Atualização: </strong>      {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:1:s A')}} <br>
 
                 </div>
             </div>

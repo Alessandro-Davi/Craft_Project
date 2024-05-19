@@ -4,6 +4,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PostagemController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SobreController;
+use App\Http\Controllers\Listar_PubliController;
+use App\Http\Controllers\Mostrar_PostagemController;
+use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\ContatoController;
+use App\Http\Controllers\PesquisarController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +41,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/signin',[App\Http\Controllers\LoginController::class,'index'])->name('login.index');
 Route::post('/signin',[App\Http\Controllers\LoginController::class,'store'])->name('login.store');
 Route::get('/signinout',[App\Http\Controllers\LoginController::class,'destroy'])->name('login.destroy');
+
+
+Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->name('sobre');
+Route::get('/pesquisar', [App\Http\Controllers\PesquisarController::class, 'index'])->name('pesquisar');
+Route::get('/listar_publi', [App\Http\Controllers\Listar_PubliController::class, 'index'])->name('listar_publi');
+Route::get('/mostrar_postagem', [App\Http\Controllers\Mostrar_PostagemController::class, 'index'])->name('mostrar_postagem');
+Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
+Route::get('/contato', [App\Http\Controllers\ContatoController::class, 'index'])->name('contato');
 
 
 

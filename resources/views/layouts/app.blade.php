@@ -17,9 +17,9 @@
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-              <form class="d-flex" role="search">
+              <form class="d-flex" role="search" >
                 <input class="form-control me-2" type="search" placeholder="Pesquisar Gênero" aria-label="Search">
-                <button class="btn btn-dark me-5" type="submit">Pesquisar</button>
+                <button class="btn btn-dark me-5" type="submit" href="{{ route('pesquisar') }}">Pesquisar</button>
               </form>
               <div class="collapse navbar-collapse d-flex justify-content-between">
                 <ul class="navbar-nav">
@@ -27,10 +27,10 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item  ms-5">
-                    <a class="nav-link" href="#">Sobre</a>
+                    <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
                   </li>
                   <li class="nav-item  ms-5">
-                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contato</a>
+                    <a class="nav-link" href="{{ route('contato') }}" >Contato</a>
                   </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -59,28 +59,28 @@
     <div class="container">
     <div class="card-group row row-cols-4">
       <div class="card border border-dark">
-        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Artes.jpg')}}" class="card-img-top" alt="..."></a>
+        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Artes.jpg')}}" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Artes</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Mecanica.jpg')}}"  href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Mecanica.jpg')}}"  href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Construção</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Decoração.jpg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Decoração.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Decoração</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Eletrônica.jpg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Eletrônica.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Eletrônica</h5>
           <hr>
@@ -93,28 +93,28 @@
 
     <div class="card-group row row-cols-4">
       <div class="card border border-dark">
-        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Costura.jpg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Costura.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Costura</h5>
          <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/Presentes.jpg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Presentes.jpg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Presentes</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/quadro.png')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('listar_publi')}}"><img src="{{url('./img/quadro.png')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Quadros</h5>
           <hr>
         </div>
       </div>
       <div class="card border border-dark">
-        <a href="{{url('/blog/categoria/'. $value->id)}}"><img src="{{url('./img/bijuteria.jpeg')}}" href="#" class="card-img-top" alt="..."></a>
+        <a href="{{url('listar_publi')}}"><img src="{{url('./img/bijuteria.jpeg')}}" href="#" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Bijuteria</h5>
           <hr>

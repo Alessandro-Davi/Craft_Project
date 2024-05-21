@@ -166,11 +166,6 @@
       reprehenderit sed aperiam delectus est impedit atque est odit sequi est</p>
 
 
-    <div class="d-flex justify-content-end">
-      <time class="published" datetime="2015-11-01"> {{ \Carbon\Carbon::parse($value->created_at)->format('d/m/Y h:1:s A')}}</time>
-    </div>
-
-
 
 
     <div class=" align-items-end d-flex justify-content-between ">

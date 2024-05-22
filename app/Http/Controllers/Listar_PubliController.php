@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use App\Models\Categoria;
 
 class Listar_PubliController extends Controller
 {
     public function index()
     {
 
-        return view('listar_publi');
+        $categorias = Categoria::get();
+     //  dd($categorias);
+     return view('listar_publi', ['categorias' => $categorias]);
+
     }
 
 }

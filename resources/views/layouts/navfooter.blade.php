@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Craft Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{url('./style.css')}}">
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
 
-
-
-      <div class="text-center">
-        <img src="{{url('./img/Logo-Blog.png')}}" width="200" height="200"  alt="Logomarca">
+   <div class="text-center">
+        <img src="{{url('./img/logo_comp.png')}}" width="200"   alt="Logomarca">
       </div>
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -26,7 +22,7 @@
               <div class="collapse navbar-collapse d-flex justify-content-between">
                 <ul class="navbar-nav">
                   <li class="nav-item ms-5">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('blog.index') }}">Home</a>
                   </li>
                   <li class="nav-item  ms-5">
                     <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
@@ -50,134 +46,12 @@
               </div>
             </div>
           </nav>
-
-    <hr>
-
-    <div class="text-center">
-      <h3> Escolher Projeto </h3>
-      <hr>
-    </div>
-
-
-
-    <div class="container">
-    <div class="card-group row row-cols-4">
-      <div class="card border border-dark">
-        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Artes.jpg')}}" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-          <h5 class="card-title">Artes</h5>
           <hr>
-        </div>
       </div>
-      <div class="card border border-dark">
-        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Mecanica.jpg')}}"  href="#" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-          <h5 class="card-title">Construção</h5>
-          <hr>
-        </div>
-      </div>
-      <div class="card border border-dark">
-        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Decoração.jpg')}}" href="#" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-          <h5 class="card-title">Decoração</h5>
-          <hr>
-        </div>
-      </div>
-      <div class="card border border-dark">
-        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Eletrônica.jpg')}}" href="#" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-          <h5 class="card-title">Eletrônica</h5>
-          <hr>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <div class="container">
-
-    <div class="card-group row row-cols-4">
-      <div class="card border border-dark">
-        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Costura.jpg')}}" href="#" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-          <h5 class="card-title">Costura</h5>
-         <hr>
-        </div>
-      </div>
-      <div class="card border border-dark">
-        <a href="{{url('listar_publi')}}"><img src="{{url('./img/Presentes.jpg')}}" href="#" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-          <h5 class="card-title">Presentes</h5>
-          <hr>
-        </div>
-      </div>
-      <div class="card border border-dark">
-        <a href="{{url('listar_publi')}}"><img src="{{url('./img/quadro.png')}}" href="#" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-          <h5 class="card-title">Quadros</h5>
-          <hr>
-        </div>
-      </div>
-      <div class="card border border-dark">
-        <a href="{{url('listar_publi')}}"><img src="{{url('./img/bijuteria.jpeg')}}" href="#" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-          <h5 class="card-title">Bijuteria</h5>
-          <hr>
-        </div>
-      </div>
-    </div>
-    </div>
-
-        <hr>
-            <div class="text-center">
-             <h2> Popular </h2>
-             </div>
-        <hr>
-        <div class="text-center">
-            <h4> Postagens mais vistas durante a semana </h4>
-          </div>
 
 
-          <div class="container">
+      @yield('content')
 
-            <div class="card-group row row-cols-3">
-              <div class="card border border-dark">
-                <img src="./img/teste1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Presentes</h5>
-                  <hr>
-                  <p class="card-text "> Descrição </p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                  <button type="button" id="test" class="btn btn-outline-dark" >Ver mais</button>
-                </div>
-              </div>
-              <div class="card border border-dark">
-                <img src="./img/teste1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Quadros</h5>
-                  <hr>
-                  <p class="card-text ">Descrição</p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                  <button type="button" id="test" class="btn btn-outline-dark" >Ver mais</button>
-                </div>
-              </div>
-              <div class="card border border-dark">
-                <img src="./img/teste1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Bijuteria</h5>
-                  <hr>
-                  <p class="card-text">Descrição</p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                  <button type="button" id="test" class="btn btn-outline-dark" >Ver mais</button>
-                </div>
-              </div>
-            </div>
-            <hr>
-            </div>
-
-
-
-
-    <!--  -->
 
 
     <footer class=" justify-content-between py-3 my-4 border-top">
@@ -215,23 +89,19 @@
         </footer>
       </div>
 
+
+
         <footer class="justify-content-between py-3 my-4 border-top">
       <div class="d-flex justify-content-center">
       <p>&copy; 2024 Company, Inc - Alessandro e João</p>
       </div>
 
         </footer>
-
-    <div  class="container" >
-
+      </div>
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
-
-
-
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </body>
+      </html>

@@ -11,17 +11,17 @@
     <div class="container" >
         <div class="row">
           <div class="col">
-            <img src="./img/teste1.jpg" style="width:400px"; class="card-img-top" alt="...">
+            <img src="{{url('./img/teste1.jpg')}}" style="width:400px"; class="card-img-top" alt="...">
             <br><br>
             <p> Alessandro Davi</p>
           </div>
           <div class="col">
-            <img src="./img/teste1.jpg" style="width:400px"; class="card-img-top" alt="...">
+            <img src="{{url('./img/teste1.jpg')}}" style="width:400px"; class="card-img-top" alt="...">
             <br><br>
             <p> Patryck Nasc</p>
           </div>
           <div class="col" >
-            <img src="./img/teste1.jpg"  style="width:400px"; class="card-img-top" alt="...">
+            <img src="{{url('./img/teste1.jpg')}}"  style="width:400px"; class="card-img-top" alt="...">
             <br><br>
             <p> João Procopio </p>
           </div>

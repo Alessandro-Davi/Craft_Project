@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <img src="./img/teste1.jpg"  width="400" height="400" alt="...">
+                <img src="{{url('./img/teste1.jpg')}}"  width="400" height="400" alt="...">
             </div>
         </div>
     </div>

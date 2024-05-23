@@ -45,7 +45,7 @@ Route::get('/signinout',[App\Http\Controllers\LoginController::class,'destroy'])
 
 Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->name('sobre');
 Route::get('/pesquisar', [App\Http\Controllers\PesquisarController::class, 'index'])->name('pesquisar');
-Route::get('/listar_publi', [App\Http\Controllers\Listar_PubliController::class, 'index'])->name('listar_publi');
+Route::get('/listar_publi/{id?}', [App\Http\Controllers\Listar_PubliController::class, 'index'])->name('listar_publi');
 Route::get('/mostrar_postagem', [App\Http\Controllers\Mostrar_PostagemController::class, 'index'])->name('mostrar_postagem');
 Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
 Route::get('/contato', [App\Http\Controllers\ContatoController::class, 'index'])->name('contato');

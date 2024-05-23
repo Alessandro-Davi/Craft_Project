@@ -149,7 +149,7 @@
 
             <div class="card-group row row-cols-3">
               <div class="card border border-dark">
-                <img src="./img/teste1.jpg" class="card-img-top" alt="...">
+                <img src="{{url('./img/teste1.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title text-center">Presentes</h5>
                   <hr>
@@ -159,7 +159,7 @@
                 </div>
               </div>
               <div class="card border border-dark">
-                <img src="./img/teste1.jpg" class="card-img-top" alt="...">
+                <img src="{{url('./img/teste1.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title text-center">Quadros</h5>
                   <hr>
@@ -169,7 +169,7 @@
                 </div>
               </div>
               <div class="card border border-dark">
-                <img src="./img/teste1.jpg" class="card-img-top" alt="...">
+                <img src="{{url('./img/teste1.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title text-center">Bijuteria</h5>
                   <hr>

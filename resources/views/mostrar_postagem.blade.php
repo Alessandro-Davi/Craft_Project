@@ -24,14 +24,14 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="./img/teste1.jpg" class="w-50" alt="...">
+            <img src="{{url('./img/teste1.jpg')}}" class="w-50" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img src="./img/Logo-Blog.png" class=" w-50" alt="...">
 
           </div>
           <div class="carousel-item">
-            <img src="./img/teste1.jpg" class=" w-50" alt="...">
+            <img src="{{url('./img/teste1.jpg')}}" class=" w-50" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev" >
@@ -71,7 +71,7 @@
     <h3>Passo 1 </h3>
 
     <div class="imagem-p">
-      <img src="./img/teste1.jpg" width="500" height="500" alt="Postagem">
+      <img src="{{url('./img/teste1.jpg')}}" width="500" height="500" alt="Postagem">
       <br>
       <br>
     </div>
@@ -85,7 +85,7 @@
     <h3>Passo 2</h3>
 
     <div class="imagem-p">
-      <img src="./img/teste1.jpg" width="500" height="500" alt="Postagem">
+      <img src="{{url('./img/teste1.jpg')}}" width="500" height="500" alt="Postagem">
       <br>
       <br>
     </div>
@@ -98,7 +98,7 @@
 
     <h3>Passo 3 </h3>
     <div class="imagem-p">
-      <img src="./img/teste1.jpg" width="500" height="500" alt="Postagem">
+      <img src="{{url('./img/teste1.jpg')}}" width="500" height="500" alt="Postagem">
       <br>
       <br>
     </div>

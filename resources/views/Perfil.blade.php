@@ -8,7 +8,7 @@
 
 
   <div class="container" style=" height: 130px;">
-  <img src="./img/teste1.jpg" class="rounded-circle pose" width="250" height="250" alt="Responsive image">
+  <img src="{{url('./img/teste1.jpg')}}" class="rounded-circle pose" width="250" height="250" alt="Responsive image">
     </div>
 
 
@@ -37,7 +37,7 @@
 <div class="container">
   <div class="card-group row row-cols-3">
     <div class="card border border-dark">
-      <img src="./img/teste1.jpg" class="card-img-top" alt="...">
+      <img src="{{url('./img/teste1.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body text-center">
         <h5 class="card-title">Nome1</h5>
         <hr>
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="card border border-dark">
-      <img src="./img/teste1.jpg" class="card-img-top" alt="...">
+      <img src="{{url('./img/teste1.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body text-center">
         <h5 class="card-title">Nome2</h5>
         <hr>
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="card border border-dark">
-      <img src="./img/teste1.jpg" class="card-img-top" alt="...">
+      <img src="{{url('./img/teste1.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body text-center">
         <h5 class="card-title">Nome3</h5>
         <hr>

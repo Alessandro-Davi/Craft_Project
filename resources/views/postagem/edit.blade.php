@@ -18,7 +18,7 @@
             </div>
             @endif
 
-                    <form method="POST" action="{{url('/postagem' . $postagem->id. '/edit')}}">
+                    <form method="POST" action="{{url('/postagem/' . $postagem->id. '/edit')}}">
                         @csrf
                         @method('PUT')
 

@@ -33,7 +33,7 @@ class PostagemController extends Controller
    {
        //dd($request->all());
 
-       $user = auth()->user()->id;
+       $user_id = auth()->user()->id;
 
 
         $messages = [
@@ -80,7 +80,7 @@ class PostagemController extends Controller
    {
       // dd($id);
 
-      $user = auth()->user()->id;
+      $user_id = auth()->user()->id;
 
       $messages = [
         'titulo.required' => 'O campo :attribute é obrigatório.',

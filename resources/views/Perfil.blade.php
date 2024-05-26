@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,22 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="{{url ('./public/style.css')}}" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" type="text/css" href="profile_style.css" />
   <title>Document</title>
 </head>
 
 <body>
 
 
-
+ 
   <div class="text-center">
     <img src="./img/Logo-Blog.png" width="200" height="200"  alt="Logomarca">
   </div>
 
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
   <div class="container">
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Pesquisar Gênero" aria-label="Search">
@@ -55,34 +53,34 @@
         </div>
       </div>
     </nav>
-
+  
 
   <hr>
+   
 
 
 
-
-  <img src="./img/fundo_tela.png"  alt="Responsive image">
+  <img src="{{url('./img/fundo_tela.png')}}"  alt="Responsive image">
 
 
 
   <div class="container" style=" height: 130px;">
-  <img src="./img/teste1.jpg" class="rounded-circle pose" width="250" height="250" alt="Responsive image">
+  <img src="./img/teste1.jpg" class="rounded-circle pose"  width="250" height="250" alt="Responsive image">
     </div>
-
-
+   
+  
     <div class="container">
 
-    <h4>Insira um nome aqui</h4>
+    <h4>Insira um nome aqui</h4> 
 
     <p> Lorem ipsum dolor sit amet. Sit consequatur magni aut itaque
       facere rem quia nihil et eaque unde. Cum architecto repellat sed quisquam ducimus </p>
 
     <div class="d-flex justify-content-between">
-    <p> E-mailteste@testezao.com </p>
+    <p> E-mailteste@testezao.com </p>  
     <button type="button" class="btn btn-outline-dark">Editar Perfil</button>
     </div>
-
+  
     <br>
 
     <ul class="profile-header-tab nav nav-tabs">
@@ -155,7 +153,7 @@
     <div class="col">
       <p>Sobre nós</p>
       <p>Trabalhe Conosco</p>
-
+      
     </div>
   </div>
   </div>
@@ -163,12 +161,12 @@
 </div>
 
 
-
+  
   <footer class="justify-content-between py-3 my-4 border-top">
 <div class="d-flex justify-content-center">
 <p>&copy; 2024 Company, Inc - Alessandro e João</p>
 </div>
-
+    
   </footer>
 </div>
 

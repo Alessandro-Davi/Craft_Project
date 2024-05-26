@@ -15,7 +15,7 @@
           <hr>
           <p class="card-text "> {{$value->conteudo}} </p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-          <button type="button" href="{{url('mostrar_postagem')}}" id="test" class="btn btn-outline-dark" >Ver mais</button>
+          <button type="button" id="test" class="btn btn-outline-dark" ><a href="{{ route('mostrar_postagem') }}">Ver mais</a></button>
         </div>
       </div>
       <div class="card border border-dark">
@@ -25,7 +25,7 @@
           <hr>
           <p class="card-text ">{{$value->conteudo}}</p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-          <button type="button" id="test" class="btn btn-outline-dark"  >Ver mais</button>
+          <button type="button" id="test" class="btn btn-outline-dark"  ><a href="{{ route('mostrar_postagem') }}">Ver mais</a></button>
         </div>
       </div>
       <div class="card border border-dark">
@@ -35,7 +35,7 @@
           <hr>
           <p class="card-text">{{$value->conteudo}}</p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-          <button type="button" id="test" class="btn btn-outline-dark" >Ver mais</button>
+          <button type="button" id="test" class="btn btn-outline-dark" ><a href="{{ route('mostrar_postagem') }}">Ver mais</a></button>
         </div>
       </div>
     </div>

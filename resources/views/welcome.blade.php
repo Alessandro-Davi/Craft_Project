@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="text-center">
-      <h3> Escolher Projeto </h3>
-      <hr>
+      <h3> Escolher Projeto<br> ────</h3>
+
     </div>
 
 

@@ -3,14 +3,13 @@
 @section('content')
 
     <div class="text-center">
-      <h3> Escolher Projeto<br> ────</h3>
-
+      <h3> Escolher Projeto<br> ────────</h3>
     </div>
 
 
     <div class="container">
     <div class="card-group row row-cols-4">
-      <div class="card border border-dark">
+      <div class="card border-dark">
         <a href="{{url('listar_publi/1')}}"><img src="{{url('./img/Artes.jpg')}}" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Artes</h5>
@@ -73,15 +72,18 @@
         </div>
       </div>
     </div>
+    <hr>
     </div>
 
-        <hr>
+<br>
+
             <div class="text-center">
-             <h2> Popular </h2>
+             <h2> Popular <br> ────</h2>
              </div>
-        <hr>
+
         <div class="text-center">
             <h4> Postagens mais vistas durante a semana </h4>
+            <br>
           </div>
 
 

@@ -7,17 +7,12 @@
 
 <div class="container">
     <div class=" text-center " id="titulo">
-        <h3>Artes</h3>
+        <h3>{{$nomeCategoria}}</h3>
     </div>
 </div>
 
-<div class="container">
-    <div class=" text-center " id="titulo">
-        <h4> Artes Show</h4>
-    </div>
-</div>
 
-                @foreach ($categorias as $categoria)
+            @foreach ($categorias as $categoria)
                 @foreach ($categoria->postagens as $value)
                 <div class="container">
                     <div class="row">

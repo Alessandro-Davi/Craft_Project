@@ -6,8 +6,40 @@
     margin-top: 10px;
     margin-bottom: 10px;
     box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
-    border: 1px solid #ebf1f6 !important;
+    border: 2px solid #050505 !important;
+
 }
+
+.navbar{
+
+    background-color: black !important;
+
+}
+
+.nav-link {
+
+
+    color:rgb(255, 255, 255);
+}
+
+
+/* link que ainda não foi acessado */
+.afooter a {
+    text-decoration: none;
+
+ }
+ /* link que foi visitado */
+ .afooter a:visited {
+     color: #fcfcfc;
+ }
+ /* quando o ponteiro do mouse passa no link */
+.afooter a:hover {
+     color: #999;
+ }
+ /* quando o link for selecionado */
+ .afooter a:active {
+     color: #fd0000;
+ }
 
 footer{
 
@@ -145,3 +177,5 @@ i {
   bottom:140px;
  left: -30px;
 }
+
+

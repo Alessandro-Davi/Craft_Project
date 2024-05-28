@@ -13,7 +13,8 @@
         <img src="{{url('./img/logo_comp.png')}}" width="200"   alt="Logomarca">
       </div>
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
               <form class="d-flex" role="search" >
                 <input class="form-control me-2" type="search" placeholder="Pesquisar Gênero" aria-label="Search">
@@ -22,7 +23,7 @@
               <div class="collapse navbar-collapse d-flex justify-content-between">
                 <ul class="navbar-nav">
                   <li class="nav-item ms-5">
-                    <a class="nav-link active" aria-current="page" href="{{ route('blog.index') }}">Home</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('blog.index') }}">Home</a>
                   </li>
                   <li class="nav-item  ms-5">
                     <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
@@ -46,15 +47,17 @@
               </div>
             </div>
           </nav>
-          <hr>
       </div>
+
+
+      <br>
 
 
       @yield('content')
 
 
 
-    <footer class=" justify-content-between py-3 my-4 border-top">
+    <footer class="afooter justify-content-between py-3 my-4 border-top">
         <div class="row">
           <div class="col">
             <p>Fale conosco</p>
@@ -65,8 +68,9 @@
           </div>
           <div class="col">
 
-              <h5>Junte-se ao Craft Project </h5>
-              <p>Entre ou Cadastre-se</p>
+
+              <h5>Junte-se  ao Craft Project </h5>
+              <p><a class="linkF" href="{{url('/login')}}">Entre </a> ou <a href="{{url('/register')}}">  Cadastre-se </a></p>
 
               <svg id="Face" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
@@ -79,9 +83,11 @@
               </svg>
 
           </div>
+
+
           <div class="col">
-            <p>Sobre nós</p>
-            <p>Trabalhe Conosco</p>
+            <p><a href="{{route('sobre')}}">Sobre nós</a></p>
+            <p><a href="{{route('contato')}}">Trabalhe Conosco</a></p>
 
           </div>
         </div>

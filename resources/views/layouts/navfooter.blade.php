@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{url('./style.css')}}" />
     <link rel="shortcut icon" type="imagex/png" href="{{url('./img/logo.png')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
 
@@ -15,7 +16,7 @@
       </div>
 
 
-      <nav class="navbar navbar-expand-lg">
+       {{-- <nav class="navbar navbar-expand-lg">
         <div class="container">
               <form class="d-flex" role="search" >
                 <input class="form-control me-2" type="search" placeholder="Pesquisar Gênero" aria-label="Search">
@@ -48,8 +49,40 @@
               </div>
             </div>
           </nav>
-      </div>
+      </div> --}}
 
+
+
+
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="col-4" >
+            <a href="{{url('perfil')}}"><img src="{{url('./img/logo.png')}}" width="50" height="50" alt="Logomarca"></a>
+          </div>
+          <div class="collapse navbar-collapse col-4" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{{ route('blog.index') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('contato') }}" >Contato</a>
+              </li>
+            </ul>
+        </div>
+            <form class="d-flex justify-content-between col-4 ">
+                <i class="bi bi-search"></i>
+              <a class="nav-link" href="{{ route('sobre') }}">alou</a>
+            </form>
+        </div>
+      </nav>
 
       <br>
 

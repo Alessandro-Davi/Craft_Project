@@ -9,7 +9,7 @@
 
     <div class="container">
     <div class="card-group row row-cols-4">
-      <div class="card border-dark">
+      <div class="card border border-dark">
         <a href="{{url('listar_publi/1')}}"><img src="{{url('./img/Artes.jpg')}}" class="card-img-top" alt="..."></a>
         <div class="card-body text-center">
           <h5 class="card-title">Artes</h5>

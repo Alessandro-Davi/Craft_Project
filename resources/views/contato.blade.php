@@ -11,43 +11,56 @@
         </div>
         </div>
 
-    <div class="container">
 
-        <div class="row">
-            <div class="col-6">
-                <h4> Contato  ────────────────────────</h4>
-                <br>
-                <br>
-                <p>
-                    Lorem ipsum dolor sit amet. 33 assumenda
-            itaque in alias ipsa eos velit inventore aut
-            quae reiciendis sit quaerat voluptate et
-            praesentium atque non sint corrupti. Id itaque
-            fugit nam odit quia cum aliquam distinctio hic
-            aspernatur laudantium qui sunt voluptas.
-            <br>
-                <br>
-                </p>
-
-                <h4> Mande um e-mail ────────────────────</h4>
-                <br>
-                <br>
-                <div id="area">
-                    <form id="formulario" autocomplete="off">
-                      <fieldset>
-                        <label>E-mail:</label><input class="campo_nome" type="text"><br>
-                        <label>Nome:</label><input class="campo_email" type="password"><br>
-                        <label>Mensagem:</label><br><textarea class="msg" cols="35" rows="8"></textarea><br>
-                        <input class="btn_submit" type="submit" value="Enviar">
-                      </fieldset>
-                    </form>
-
+        <section class="ftco-section">
+            <div class="container">
+                            <div class="row no-gutters">
+                                <div class="col-md-7">
+                                    <div class="contact-wrap w-100 p-md-5 p-4">
+                                        <h3>Deixe sua mensagem: </h3>
+                                        <div id="form-message-warning" class="mb-4"></div>
+                                  <div id="form-message-success" class="mb-4">
+                             {{-- Sua mensagem foi enviada, obrigado! --}}
+                                  </div>
+                                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label" for="name">Nome:</label>
+                                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nome">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label" for="email">E-mail:</label>
+                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mt-2">
+                                                    <div class="form-group">
+                                                        <label class="label" for="#">Mensagem:</label>
+                                                        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Mensagem"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group mt-3">
+                                                        <input type="submit" value="Enviar" class=" btn btn-dark">
+                                                        <div class="submitting"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 d-flex">
+                                        <img src="{{url('./img/email.png')}}"  width="400" height="400" alt="...">
+                          </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-6">
-                <img src="{{url('./img/teste1.jpg')}}"  width="400" height="400" alt="...">
-            </div>
-        </div>
-    </div>
+        </section>
 
 @endsection

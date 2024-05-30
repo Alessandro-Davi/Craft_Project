@@ -3,37 +3,33 @@
 @section('content')
 
     <div class="text-center">
-      <h3> Sobre </h3>
+      <h3> Sobre  <br> ───</h3>
     </div>
 
     <br> <br> <br>
 
     <div class="container" >
         <div class="row">
-          <div class="col">
-            <img src="{{url('./img/teste1.jpg')}}" style="width:400px"; class="card-img-top" alt="...">
+          <div class="col-4"style="text-align: center">
+            <img src="{{url('./img/imagem_Ale.jpg')}}" style="width:300px" ; class="card-img-top" alt="...">
             <br><br>
             <p> Alessandro Davi</p>
           </div>
-          <div class="col">
-            <img src="{{url('./img/teste1.jpg')}}" style="width:400px"; class="card-img-top" alt="...">
+          <div class="col-4"style="text-align: center">
+            <img src="{{url('./img/imagem_Nasc.png')}}" style="width:300px"; class="card-img-top" alt="...">
             <br><br>
             <p> Patryck Nasc</p>
           </div>
-          <div class="col" >
-            <img src="{{url('./img/teste1.jpg')}}"  style="width:400px"; class="card-img-top" alt="...">
+          <div class="col-4"style="text-align: center" >
+            <img src="{{url('./img/imagem_Joao.png')}}"  style="width:300px"; class="card-img-top" alt="...">
             <br><br>
             <p> João Procopio </p>
           </div>
         </div>
         <br><br>
-        <div class="row">
+        <div class="row" style="text-align: center">
             <p id="contatext ">
-                Lorem ipsum dolor sit amet. Sit consequatur magni aut itaque facere rem quia nihil
-                et eaque unde. Cum architecto repellat sed quisquam ducimus ad galisum expedita
-                33 veniam distinctio nam dolorem animi id ipsam nostrum in accusantium libero. Sit
-                nulla accusantium ut maiores blanditiis rem deleniti consequatur sit alias dolorum
-                sit vero vitae!
+                Este blog foi um projeto que fizemos para a conclusão do nosso curso.
 
             </p>
           </div>

@@ -8,12 +8,24 @@
     <link rel="stylesheet" type="text/css" href="{{url('./style.css')}}" />
     <link rel="shortcut icon" type="imagex/png" href="{{url('./img/logo.png')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"  href="{{url('./style_nav.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="nav.js"></script>
+    <script src="https://kit.fontawesome.com/4d548a4e76.js" crossorigin="anonymous"></script>
+
+
   </head>
   <body>
 
-   <div class="text-center">
+   {{-- <div class="text-center">
         <img src="{{url('./img/logo_comp.png')}}" width="200"   alt="Logomarca">
-      </div>
+      </div> --}}
 
 
        {{-- <nav class="navbar navbar-expand-lg">
@@ -36,7 +48,7 @@
                 </ul>
                 <ul class="navbar-nav">
                   <li class="nav-item ">
-                    <a class="nav-link" href="{{url ('/login') }}">Login</a>
+                    <a class="nav-link" >Login</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{url ('/register') }}">Cadastrar</a>
@@ -52,37 +64,52 @@
       </div> --}}
 
 
-
-
-
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-sm p-3 fixed-top">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="col-4" >
-            <a href="{{url('perfil')}}"><img src="{{url('./img/logo.png')}}" width="50" height="50" alt="Logomarca"></a>
+          <a class="navbar-brand" href="#">
+            <img src="{{url('./img/logo_comp.png')}}" alt="HK Logo" class="logo-img" style="width:90px;">
+          </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item ps-5">
+                  <a class="nav-link" href="{{ route('blog.index') }}">Inicio</a>
+                </li>
+                <li class="nav-item ps-5">
+                  <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
+                </li>
+                <li class="nav-item ps-5">
+                    <a class="nav-link" href="{{ route('contato') }}">Contato</a>
+                  </li>
+              </ul>
+              <form class="d-flex ms-auto nav-item search-form">
+                <div class="search-wrapper">
+                  <input class="form-control me-2 p-1 ps-2" type="text" placeholder="Pesquisar">
+                  <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </form>
+
+            <div class="dropdown nav-item">
+                <button type="button" class="btn dropdown-toggle border-0" data-bs-toggle="dropdown">
+                    <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-center">
+                  <li><a class="dropdown-item" href="{{url ('/register') }}">Registrar</a></li>
+                  <li><a class="dropdown-item" href="{{ route('sobre') }}">Sobre</a></li>
+                  <li><a class="dropdown-item" href="{{ route('contato') }}">Contato</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="{{url ('/login') }}">Entrar</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="collapse navbar-collapse col-4" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route('blog.index') }}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('contato') }}" >Contato</a>
-              </li>
-            </ul>
-        </div>
-            <form class="d-flex justify-content-between col-4 ">
-                <i class="bi bi-search"></i>
-              <a class="nav-link" href="{{ route('sobre') }}">alou</a>
-            </form>
-        </div>
-      </nav>
+
+
+    </nav>
 
       <br>
 
@@ -133,7 +160,7 @@
 
         <footer class="justify-content-between py-3 my-4 border-top">
       <div class="d-flex justify-content-center">
-      <p>&copy; 2024 Company, Inc - Alessandro e João</p>
+      <p>&copy; 2024 Company, Inc - Alessandro Davi, Patryck Nasc e João Procópio</p>
       </div>
 
         </footer>

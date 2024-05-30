@@ -66,7 +66,7 @@
 
       <nav class="navbar navbar-expand-sm p-3 fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{ route('blog.index') }}">
             <img src="{{url('./img/logo_comp.png')}}" alt="HK Logo" class="logo-img" style="width:90px;">
           </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -98,11 +98,9 @@
                     <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-center">
-                  <li><a class="dropdown-item" href="{{url ('/register') }}">Registrar</a></li>
-                  <li><a class="dropdown-item" href="{{ route('sobre') }}">Sobre</a></li>
-                  <li><a class="dropdown-item" href="{{ route('contato') }}">Contato</a></li>
+                    <li><a class="dropdown-item" href="{{url ('/signin') }}">Entrar</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="{{url ('/login') }}">Entrar</a></li>
+                  <li><a class="dropdown-item" href="{{url ('/signin') }}">Registrar</a></li>
                 </ul>
               </div>
             </div>

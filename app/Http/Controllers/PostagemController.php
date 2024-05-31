@@ -52,6 +52,7 @@ class PostagemController extends Controller
         $postagem->conteudo = $request->conteudo;
         $postagem->user_id=$user_id;
         $postagem->categoria_id=$request->categoria_id;
+        $postagem->imagem =$request->imagem;
         $postagem->save();
 
         return redirect('postagem')->with('status', 'Postagem Salva com sucesso');
@@ -92,11 +93,14 @@ class PostagemController extends Controller
         'conteudo' => 'required|min:5',
     ], $messages);
 
+
+
         $postagem = Postagem::find($id);
         $postagem->titulo = $request->titulo;
         $postagem->conteudo = $request->conteudo;
         $postagem->user_id=$user_id;
         $postagem->categoria_id=$request->categoria_id;
+        $postagem->imagem =$request->imagem;
         $postagem->save();
 
        return redirect('postagem')->with('status', 'Postagem atualizada com sucesso');
@@ -109,10 +113,10 @@ class PostagemController extends Controller
    public function destroy(string $id)
    {
 
-       $postagem = Postagem::find($id);
+       $postagem=Postagem::find($id);
         $postagem->delete();
 
-       // return redirect('postagem')->with('status', 'Postagem excluida com sucesso');
+     return redirect('postagem')->with('status', 'Postagem excluida com sucesso');
    }
 }
 

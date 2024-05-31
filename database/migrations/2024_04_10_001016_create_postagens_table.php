@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('conteudo');
             $table->bigInteger('user_id');
             $table->bigInteger('categoria_id');
+            $table->text('imagem')->nullable();
             //$table->foreign('categoria_id')->references('id')->on('categorias');
             //$table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

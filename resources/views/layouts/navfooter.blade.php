@@ -81,6 +81,9 @@
                   <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
                 </li>
                 <li class="nav-item ps-5">
+                    <a class="nav-link" href="{{ route('listar_autor') }}">Autores</a>
+                  </li>
+                <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('contato') }}">Contato</a>
                   </li>
               </ul>

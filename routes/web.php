@@ -11,6 +11,7 @@ use App\Http\Controllers\Mostrar_PostagemController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\PesquisarController;
+use App\Http\Controllers\Listar_AutorController;
 
 
 
@@ -46,8 +47,10 @@ Route::get('/signinout',[App\Http\Controllers\LoginController::class,'destroy'])
 Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->name('sobre');
 Route::get('/pesquisar', [App\Http\Controllers\PesquisarController::class, 'index'])->name('pesquisar');
 Route::get('/listar_publi/{id?}', [App\Http\Controllers\Listar_PubliController::class, 'index'])->name('listar_publi');
+Route::get('/listar_autor', [App\Http\Controllers\Listar_AutorController::class, 'autor'])->name('listar_autor');
+Route::get('/perfil/{id?}', [App\Http\Controllers\PerfilController::class, 'autorPostagem'])->name('autorPostagem');
 Route::get('/mostrar_postagem', [App\Http\Controllers\Mostrar_PostagemController::class, 'index'])->name('mostrar_postagem');
-Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
+// Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
 Route::get('/contato', [App\Http\Controllers\ContatoController::class, 'index'])->name('contato');
 
 

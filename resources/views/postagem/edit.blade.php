@@ -1,6 +1,13 @@
 @extends('adminlte::page')
 
 @section('content')
+
+
+<link rel="stylesheet" href="{{url('/richtexteditor/rte_theme_default.css')}}" />
+<script type="text/javascript" src="{{url('/richtexteditor/rte.js')}}"></script>
+<script type="text/javascript" src="{{url('/richtexteditor/plugins/all_plugins.js')}}"></script>
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -37,14 +44,21 @@
                         </select>
                         <br>
 
-
                         <label for="fname">Titulo:</label><br>
                         <input type="text" class="form-control" value="{{$postagem->titulo}} "name="titulo"><br><br>
                         <label for="fname">Conteúdo:</label><br>
-                        <input type="text" class="form-control" value="{{$postagem->conteudo}} "name="conteudo"><br><br>
+                        <textarea id="inp_editor1" class="form-control" name="imagem">
+                            {!!$postagem->conteudo!!}
+                        </textarea>
+                        <label for="fname">Imagem:</label><br>
+                         <input type="file" class="form-control" name="imagem"><br>
+                         {!!$postagem->imagem!!}
                         <input type="submit" class="form-control" value="Enviar">
-                    </form>
 
+                    </form>
+                    <script>
+                        var editor1 = new RichTextEditor("#inp_editor1");
+                    </script>
                 </div>
             </div>
         </div>

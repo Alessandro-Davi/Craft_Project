@@ -7,7 +7,7 @@
 
 <div class="container">
     <div class=" text-center " id="titulo">
-        <h3>Autores</h3>
+        <h3>Autores <br> ───</h3>
     </div>
 </div>
 
@@ -25,6 +25,7 @@
                 </div>
             </article>
         @endforeach
+
 
 
 

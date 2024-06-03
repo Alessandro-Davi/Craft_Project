@@ -77,14 +77,15 @@
                 <li class="nav-item ps-5">
                   <a class="nav-link" href="{{ route('blog.index') }}">Inicio</a>
                 </li>
-                <li class="nav-item ps-5">
-                  <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
-                </li>
+
                 <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('listar_autor') }}">Autores</a>
                   </li>
                 <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('contato') }}">Contato</a>
+                  </li>
+                  <li class="nav-item ps-5">
+                    <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
                   </li>
               </ul>
               <form class="d-flex ms-auto nav-item search-form">

@@ -41,12 +41,11 @@
                         <label for="fname">Titulo:</label><br>
                         <input type="text" class="form-control" name="titulo"><br>
 
-                        <label for="fname">Conteudo: </label><br>
+                        <label for="fname">Conteudo:</label><br>
                         <textarea id="inp_editor1" class="form-control" name="conteudo">
                         </textarea>
                         <label for="fname">Imagem:</label><br>
-                        <textarea id="inp_editor1" class="form-control" name="conteudo">
-                        </textarea>
+                        <input type="file" id="imagem" name="imagem">
                         <input type="submit" class="form-control" value="Enviar">
                     </form>
                     <script>

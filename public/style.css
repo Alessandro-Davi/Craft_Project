@@ -80,6 +80,7 @@ footer{
 
 .pagination {
     display: inline-block;
+    text-align: center !important;
   }
 
 .pagination a {

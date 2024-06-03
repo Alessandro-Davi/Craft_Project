@@ -23,7 +23,7 @@
                         <h4> {{ $value->titulo }}  </h4>
                         <br>
                         <p> {{ $value->conteudo }}</p>
-                          <button class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button>
+                        <a href="{{url ('/mostrar_postagem') }}">   <button class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
                           <br><br><br><br><br><br>
                           <i class="fa-2x bi bi-exclamation-triangle"></i>
                       </div>
@@ -32,16 +32,16 @@
                 @endforeach
             @endforeach
 
-            <div  class="container text-center ">
-  <div class="pagination">
+<div class="container ">
+  <div class="text-center">
     <hr>
     <a href="#">&laquo;</a>
     <a href="#" class="btn btn-dark" id="number">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
-    <a href="#">6</a>
+    <a href="#"class="btn btn-dark" id="number">2</a>
+    <a href="#"class="btn btn-dark" id="number">3</a>
+    <a href="#"class="btn btn-dark" id="number">4</a>
+    <a href="#"class="btn btn-dark" id="number">5</a>
+    <a href="#"class="btn btn-dark" id="number">6</a>
     <a href="#">&raquo;</a>
 </div>
 </div>

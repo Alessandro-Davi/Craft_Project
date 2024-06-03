@@ -52,7 +52,7 @@ class PostagemController extends Controller
         $postagem->conteudo = $request->conteudo;
         $postagem->user_id=$user_id;
         $postagem->categoria_id=$request->categoria_id;
-        $postagem->imagem =$request->imagem;
+        $postagem->imagem=$request->imagem;
         $postagem->save();
 
         return redirect('postagem')->with('status', 'Postagem Salva com sucesso');

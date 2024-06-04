@@ -52,7 +52,7 @@
                         </textarea>
                         <label for="fname">Imagem:</label><br>
                          <input type="file" class="form-control" name="imagem"><br>
-                         {!!$postagem->imagem!!}
+                         <img src="data:image/png;base64,{!! $postagem->imagem !!}" />
                         <input type="submit" class="form-control" value="Enviar">
 
                     </form>

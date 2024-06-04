@@ -7,43 +7,51 @@
 
 <div class="container">
     <div class=" text-center " id="titulo">
-        <h3>{{$nomeCategoria}}</h3>
+        <h3>{{ $postagens->first()->categoria->nome }}</h3>
     </div>
 </div>
 
 
-            @foreach ($categorias as $categoria)
+@foreach ($postagens as $value)
+<div class="container">
+    <div class="row">
+      <div class="col-6 " style="width: 324px;">
+        <img src="data:image/png;base64,{{ $value->imagem }}" width="300" height="300"/>
+      </div>
+      <div class="col-6 ms-3">
+        <h4> {{ $value->titulo }} </h4>
+        <br>
+        <p> {!! $value->conteudo !!}</p>
+        <a href="{{url ('/mostrar_postagem') }}">  <button class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
+          <br><br><br><br><br><br>
+          <i class="fa-2x bi bi-exclamation-triangle"></i>
+      </div>
+    </div>
+</div>
+@endforeach
+
+    <div class="container">
+
+            {{ $postagens->links() }}
+
+        </div>
+            {{-- @foreach ($categorias as $categoria)
                 @foreach ($categoria->postagens as $value)
                 <div class="container">
                     <div class="row">
                       <div class="col-6 " style="width: 324px;">
-                        <img src="{{url('./img/teste1.jpg')}}"  width="300" height="300" alt="...">
+                        <img src="data:image/png;base64,{{ $value->imagem }}" width="300" height="300"/>
                       </div>
                       <div class="col-6 ms-3">
-                        <h4> {{ $value->titulo }}  </h4>
+                        <h4> {{ $value->titulo }} </h4>
                         <br>
-                        <p> {{ $value->conteudo }}</p>
-                        <a href="{{url ('/mostrar_postagem') }}">   <button class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
+                        <p> {!! $value->conteudo !!}</p>
+                        <a href="{{url ('/mostrar_postagem') }}">  <button class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
                           <br><br><br><br><br><br>
                           <i class="fa-2x bi bi-exclamation-triangle"></i>
                       </div>
                     </div>
                 </div>
                 @endforeach
-            @endforeach
-
-<div class="container ">
-  <div class="text-center">
-    <hr>
-    <a href="#">&laquo;</a>
-    <a href="#" class="btn btn-dark" id="number">1</a>
-    <a href="#"class="btn btn-dark" id="number">2</a>
-    <a href="#"class="btn btn-dark" id="number">3</a>
-    <a href="#"class="btn btn-dark" id="number">4</a>
-    <a href="#"class="btn btn-dark" id="number">5</a>
-    <a href="#"class="btn btn-dark" id="number">6</a>
-    <a href="#">&raquo;</a>
-</div>
-</div>
-
+            @endforeach --}}
 @endsection

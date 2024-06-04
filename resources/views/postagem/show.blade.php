@@ -14,7 +14,7 @@
                     <strong>Conteudo: </strong>             {!!$postagem->conteudo!!}
                     <br>
                     <br>
-                    <strong>Imagem: </strong>       {!!$postagem->imagem!!}
+                    <strong>Imagem: </strong>  <br>     <img src="data:image/png;base64,{{ $postagem->imagem }}" />
                     <br>
                     <strong>Criação: </strong>             {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:1:s A')}} <br>
                     <strong>Atualização: </strong>      {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:1:s A')}} <br>

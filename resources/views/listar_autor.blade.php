@@ -4,6 +4,36 @@
 
 @section('content')
 
+<style>
+
+
+.fundo {
+  background-color: #cac8c8;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+}
+
+a{
+
+    text-decoration: none;
+    color: #000000;
+
+}
+/*Hover dos hiperlinks */
+.fundo:hover {
+  background-color: black; /* Cor de fundo azul ao passar o mouse */
+  color: #62c06e; /* Cor do texto branco ao passar o mouse */
+}
+
+</style>
 
 <div class="container">
     <div class=" text-center " id="titulo">
@@ -15,10 +45,10 @@
 
         @foreach ($autores as $value)
             <article class="post">
-                <div class="container">
+                <div class="container fundo">
                     <div class="row">
-                      <div class="col-6 ms-3">
-                        <a href="{{url ('/perfil/' . $value->id) }}"><h4> {{ $value->name }}  </h4></a>
+                      <div class=" ms-3">
+                        <a href="{{url ('/perfil/' . $value->id) }}"> {{ $value->name }} </a>
                         <br>
                       </div>
                     </div>
@@ -28,19 +58,5 @@
 
 
 
-
-<div  class="container text-center ">
-  <div class="pagination">
-    <hr>
-    <a href="#">&laquo;</a>
-    <a href="#" class="btn btn-dark" id="number">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
-    <a href="#">6</a>
-    <a href="#">&raquo;</a>
-</div>
-</div>
 
 @endsection

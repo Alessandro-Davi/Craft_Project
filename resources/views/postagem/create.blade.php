@@ -24,7 +24,7 @@
             </div>
             @endif
 
-                    <form method="POST" action="{{url('/postagem/create')}}">
+                    <form method="POST" action="{{url('/postagem/create')}}" enctype="multipart/form-data">
                         @csrf
 
 

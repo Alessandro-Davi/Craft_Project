@@ -47,12 +47,14 @@ class PostagemController extends Controller
         ], $messages);
 
 
+        $imagem = $request->file('imagem');
+
         $postagem = new Postagem;
         $postagem->titulo = $request->titulo;
         $postagem->conteudo = $request->conteudo;
         $postagem->user_id=$user_id;
         $postagem->categoria_id=$request->categoria_id;
-        $postagem->imagem=$request->imagem;
+        $postagem->imagem = base64_encode (file_get_contents ($imagem));
         $postagem->save();
 
         return redirect('postagem')->with('status', 'Postagem Salva com sucesso');

@@ -19,9 +19,9 @@
 		<form action="">
 			<h1>Crie sua conta</h1>
 			<span>Nome e email para registrar!</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="text" placeholder="Name"/>
+			<input type="email" placeholder="Email"/>
+			<input type="password" placeholder="Password"/>
 			<button>Login in</button>
 		</form>
 	</div>

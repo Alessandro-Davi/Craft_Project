@@ -58,15 +58,15 @@
               </form>
 
             <div class="dropdown nav-item">
+                @auth
+                {{auth()->user()->name}}
+                <ul class="dropdown-menu dropdown-menu-center">
+                    <li><a class="dropdown-item" href="{{url ('/logout') }}">Sair</a></li>
+                </ul>
                 <button type="button" class="btn dropdown-toggle border-0" data-bs-toggle="dropdown">
                     <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
                 </button>
-                    @auth
 
-                    {{auth()->user()->name}}
-                    <ul class="dropdown-menu dropdown-menu-center">
-                        <li><a class="dropdown-item" href="{{url ('/logout') }}">Sair</a></li>
-                    </ul>
 
                     @else
                     <ul class="dropdown-menu dropdown-menu-center">

@@ -8,6 +8,11 @@
     <title>login</title>
 </head>
 <body>
+    @session('status')
+    <div class="p-4 bg-green-100">
+        {{ $value }}
+    </div>
+@endsession
 
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
@@ -21,13 +26,15 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form method="post" action="{{ url('/login_usuario')}}" >
+            @csrf
 			<h1>Login in</h1>
 			<span>nome ou email aqui</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input name="email" type="email" placeholder="Email" />
+			<input name="password" type="password" placeholder="Password" />
 			<a href="#">Esqueceu sua senha?</a>
 			<button>Login in</button>
+
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -38,7 +45,7 @@
 				<button class="ghost" id="signIn">Login in</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1>Salve Parceiro!</h1>
+				<h1>Olá!</h1>
 				<p>Insira seus dados pessoais e comece sua jornada conosco</p>
 				<button class="ghost" id="signUp">Cadastre-se</button>
 			</div>

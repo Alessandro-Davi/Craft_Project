@@ -8,7 +8,7 @@
 
 
 .fundo {
-  background-color: #cac8c8;
+  background-color: #757474;
   text-align: center;
   display: block;
   margin-bottom: 10px;
@@ -24,13 +24,13 @@
 a{
 
     text-decoration: none;
-    color: #000000;
+    color: #fffefe;
 
 }
 /*Hover dos hiperlinks */
 .fundo:hover {
   background-color: black; /* Cor de fundo azul ao passar o mouse */
-  color: #62c06e; /* Cor do texto branco ao passar o mouse */
+
 }
 
 </style>

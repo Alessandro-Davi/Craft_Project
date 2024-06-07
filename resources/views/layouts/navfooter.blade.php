@@ -23,46 +23,6 @@
   </head>
   <body>
 
-   {{-- <div class="text-center">
-        <img src="{{url('./img/logo_comp.png')}}" width="200"   alt="Logomarca">
-      </div> --}}
-
-
-       {{-- <nav class="navbar navbar-expand-lg">
-        <div class="container">
-              <form class="d-flex" role="search" >
-                <input class="form-control me-2" type="search" placeholder="Pesquisar Gênero" aria-label="Search">
-                <button class="btn btn-dark me-5" type="submit" href="{{ route('pesquisar') }}">Pesquisar</button>
-              </form>
-              <div class="collapse navbar-collapse d-flex justify-content-between">
-                <ul class="navbar-nav">
-                  <li class="nav-item ms-5">
-                    <a class="nav-link" aria-current="page" href="{{ route('blog.index') }}">Home</a>
-                  </li>
-                  <li class="nav-item  ms-5">
-                    <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
-                  </li>
-                  <li class="nav-item  ms-5">
-                    <a class="nav-link" href="{{ route('contato') }}" >Contato</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav">
-                  <li class="nav-item ">
-                    <a class="nav-link" >Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{url ('/register') }}">Cadastrar</a>
-                  </li>
-                  <li class="nav-item ms-auto">
-                    <a href="{{url('perfil')}}"><img src="{{url('./img/boy.png')}}" width="50" height="50" alt="Logomarca"></a>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-          </nav>
-      </div> --}}
-
 
       <nav class="navbar navbar-expand-sm p-3 fixed-top">
         <div class="container-fluid">
@@ -101,10 +61,22 @@
                 <button type="button" class="btn dropdown-toggle border-0" data-bs-toggle="dropdown">
                     <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
                 </button>
-                <ul class="dropdown-menu dropdown-menu-center">
-                    <li><a class="dropdown-item" href="{{url ('/signin') }}">Entrar</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="{{url ('/signin') }}">Registrar</a></li>
+                    @auth
+
+                    {{auth()->user()->name}}
+                    <ul class="dropdown-menu dropdown-menu-center">
+                        <li><a class="dropdown-item" href="{{url ('/logout') }}">Sair</a></li>
+                    </ul>
+
+                    @else
+                    <ul class="dropdown-menu dropdown-menu-center">
+                        <li><a class="dropdown-item" href="{{url ('/signin') }}">Entrar</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{url ('/signin') }}">Registrar</a></li>
+                    @endauth
+
+
+
                 </ul>
               </div>
             </div>
@@ -121,7 +93,7 @@
 
 
     <footer class="afooter justify-content-between py-3 my-4 border-top">
-        <div class="row">
+        <div class="row  ">
           <div class="col">
             <p>Fale conosco</p>
 
@@ -130,8 +102,6 @@
             </svg>(21) 99232-2332</p>
           </div>
           <div class="col">
-
-
               <h5>Junte-se  ao Craft Project </h5>
               <p><a class="linkF" href="{{url('/login')}}">Entre </a> ou <a href="{{url('/register')}}">  Cadastre-se </a></p>
 
@@ -144,29 +114,23 @@
               <svg id="What" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                 <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
               </svg>
-
           </div>
 
-
-          <div class="col">
+          <div class="col ">
             <p><a href="{{route('sobre')}}">Sobre nós</a></p>
             <p><a href="{{route('contato')}}">Trabalhe Conosco</a></p>
-
           </div>
         </div>
-        </div>
         </footer>
-      </div>
 
 
 
-        <footer class="justify-content-between py-3 my-4 border-top">
+        <footer class="justify-content-between py-3 border-top ">
       <div class="d-flex justify-content-center">
       <p>&copy; 2024 Company, Inc - Alessandro Davi, Patryck Nasc e João Procópio</p>
       </div>
-
         </footer>
-      </div>
+
 
 
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

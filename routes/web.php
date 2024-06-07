@@ -53,6 +53,7 @@ Route::get('/mostrar_postagem', [App\Http\Controllers\Mostrar_PostagemController
 // Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
 Route::get('/contato', [App\Http\Controllers\ContatoController::class, 'index'])->name('contato');
 
+Route::post('/login_usuario', [App\Http\Controllers\UserController::class, 'login'])->name('login_usuario');
 
 
 

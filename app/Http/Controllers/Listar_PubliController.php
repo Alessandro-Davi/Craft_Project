@@ -14,7 +14,9 @@ class Listar_PubliController extends Controller
 
         $postagens = Postagem::where('categoria_id', $id)->paginate(5);
         //dd($postagens);
-        return view('listar_publi', ['postagens' => $postagens]);
+        $postagem = Postagem::find($id);
+
+        return view('listar_publi', ['postagens' => $postagens , 'postagem' => $postagem]);
 
         /*
         $categoria = Categoria::find($id);
@@ -25,6 +27,5 @@ class Listar_PubliController extends Controller
         return view('listar_publi', ['categorias' => $categorias, 'nomeCategoria' => $nomeCategoria]);
         */
     }
-
 
 }

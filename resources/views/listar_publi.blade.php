@@ -3,39 +3,38 @@
 
 
 @section('content')
-
-
-<div class="container">
-    <div class=" text-center " id="titulo">
-        <h3>{{ $postagens->first()->categoria->nome }}</h3>
+    <div class="container">
+        <div class=" text-center " id="titulo">
+            <h3>{{ $postagens->first()->categoria->nome }}</h3>
+        </div>
     </div>
-</div>
 
 
-@foreach ($postagens as $value)
-<div class="container">
-    <div class="row">
-      <div class="col-6 " style="width: 324px;">
-        <img src="data:image/png;base64,{{ $value->imagem }}" width="300" height="300"/>
-      </div>
-      <div class="col-6 ms-3">
-        <h4> {{ $value->titulo }} </h4>
-        <br>
-        <p> {!! $value->conteudo !!}</p>
-        <a href="{{url ('/mostrar_postagem') }}">  <button class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
-          <br><br><br><br><br><br>
-          <i class="fa-2x bi bi-exclamation-triangle"></i>
-      </div>
-    </div>
-</div>
-@endforeach
+    @foreach ($postagens as $value)
+        <div class="container">
+            <div class="row">
+                <div class="col-6 " style="width: 324px;">
+                    <img src="data:image/png;base64,{{ $value->imagem }}" width="300" height="300" />
+                </div>
+                <div class="col-6 ms-3">
+                    <h4> {{ $value->titulo }} </h4>
+                    <br>
+                    <p> {!! $value->conteudo !!}</p>
+                    <a href="{{ route('mostrar_postagem', ['id' => $postagem->id]) }}"> <button
+                            class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
+                    <br><br><br><br><br><br>
+                    <i class="fa-2x bi bi-exclamation-triangle"></i>
+                </div>
+            </div>
+        </div>
+    @endforeach
 
     <div class="container">
 
-            {{ $postagens->links() }}
+        {{ $postagens->links() }}
 
-        </div>
-            {{-- @foreach ($categorias as $categoria)
+    </div>
+    {{-- @foreach ($categorias as $categoria)
                 @foreach ($categoria->postagens as $value)
                 <div class="container">
                     <div class="row">

@@ -23,4 +23,6 @@ class BlogController extends Controller
         $postagens = Postagem::where('categoria_id', $id)->get();
         return view('Perfil', ['postagens' => $postagens]);
    }
+
+
 }

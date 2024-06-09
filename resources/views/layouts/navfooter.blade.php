@@ -62,6 +62,9 @@
                     {{auth()->user()->name}}
                     @csrf
                     <ul class="dropdown-menu dropdown-menu-center">
+
+                        <li><a class="dropdown-item" href="">Perfil</a></li>
+                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{url ('/logout') }}">Sair</a></li>
                     </ul>
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -71,14 +74,19 @@
                         <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
                     </button>
                     @endauth
-                    @guest
+
+                @guest
+
                     <ul class="dropdown-menu dropdown-menu-center">
-                        <button type="button" class="btn dropdown-toggle border-0" data-bs-toggle="dropdown">
-                            <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
+
                         <li><a class="dropdown-item" href="{{url ('/signin') }}">Entrar</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{url ('/signin') }}">Registrar</a></li>
                     </ul>
+                        <button type="button" class="btn dropdown-toggle border-0" data-bs-toggle="dropdown">
+                            <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
+                        </button>
+
                     @endguest
               </div>
             </div>

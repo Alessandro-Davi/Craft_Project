@@ -59,9 +59,8 @@ class UserController extends Controller
         $user->password=Hash::make($request->password);
         $user->save();
 
-        return redirect('signin')->with('status', 'Usuário registrado com sucesso');
+        return redirect('signin')->with('status', 'USUÁRIO CADASTRADO COM SUCESSO');
     }
-
 
     /**
      * Display a listing of the resource.

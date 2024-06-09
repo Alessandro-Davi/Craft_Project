@@ -54,8 +54,8 @@ Route::get('/mostrar_postagem', [App\Http\Controllers\Mostrar_PostagemController
 Route::get('/contato', [App\Http\Controllers\ContatoController::class, 'index'])->name('contato');
 
 Route::post('/login_usuario', [App\Http\Controllers\UserController::class, 'login'])->name('login_usuario');
-
-
+Route::post('/cadastrar_usuario', [App\Http\Controllers\UserController::class, 'cadastrar'])->name('cadastrar_usuario');
+Route::post('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout_usuario');
 
 // CRUD CATEGORIA
 

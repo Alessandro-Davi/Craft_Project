@@ -16,13 +16,14 @@
 
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="">
+		<form method="post" action="{{ url('/cadastrar_usuario')}}">
+            @csrf
 			<h1>Crie sua conta</h1>
-			<span>Nome e email para registrar!</span>
-			<input type="text" placeholder="Name"/>
-			<input type="email" placeholder="Email"/>
-			<input type="password" placeholder="Password"/>
-			<button>Login in</button>
+			<span>Nome e email</span>
+			<input name="name" type="text" placeholder="Name"/>
+			<input name="email" type="email" placeholder="Email"/>
+			<input name="password" type="password" placeholder="Password"/>
+			<button>Cadastrar</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -55,7 +56,7 @@
 
 <footer>
 	<p>
-		2024 Company, Inc - Alessandro Davi, Patryck Nasc e João Procópio
+		&copy; 2024 Company, Inc - Alessandro Davi, Patryck Nasc e João Procópio
 	</p>
 </footer>
 

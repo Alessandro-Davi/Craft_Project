@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 
 class UserController extends Controller
 {
@@ -29,19 +30,31 @@ class UserController extends Controller
             Auth::login($user);
             //redirecionar para dashboard
             //dd(auth()->user());
-            return redirect('welcome');
+            return redirect('/');
         }else{
             //redirecionar para tela anterior mostrando mensagem login ou senha inválida
-            return redirect('signin')->with('status', 'Salva com sucesso');
+            return redirect('signin')->with('status', 'Tente novamente');
         }
 
 
     }
 
-    public function registrar(Request $request){
+
+
+
+    public function logout(Request $request): RedirectResponse {
+
+        Auth::logout();
+        $request->session()->invalidate();
+
+        return redirect('/');
+    }
+
+
+    public function cadastrar(Request $request){
 
         $user = new User;
-        $user->nome = $request->nome;
+        $user->name = $request->name;
         $user->email = $request->email;
         $user->password=Hash::make($request->password);
         $user->save();

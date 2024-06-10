@@ -18,6 +18,28 @@ class PerfilController extends Controller
             return view('perfil', ['postagens' => $postagens,  'nomeAutor' => $nomeAutor, 'emailAutor' =>  $emailAutor]);
 
         }
+
+
+        public function perfilUpdate(Request $request, string $id)
+        {
+            //dd($request->all());
+
+            $validated = $request->validate([
+                'email' => '|min:30',
+                'biografia' => '|min:15',
+                'foto' => '|mimes:jpg,png',
+            ]);
+
+            $foto = $request->file('foto');
+
+            $user = User::find($id);
+            $user->email = $request->email;
+            $user->biografia = $request->biografia;
+            $user->imagem = base64_encode (file_get_contents ($imagem));
+            $user->save();
+
+            return redirect('Perfil')->with('status', 'Perfil atualizado com sucesso!');
+        }
     }
 
 

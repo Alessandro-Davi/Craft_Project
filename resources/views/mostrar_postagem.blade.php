@@ -6,7 +6,7 @@
         <div class="d-flex align-items-center">
             <img src="./img/boy.png" width="50" height="50" alt="Logomarca">
             <div class="m-3">
-                <p> Nome ou Nick // Categoria do projeto</p>
+                <p> {{ $postagem->user->name   }}</p>
                 <p> {{ $postagem->titulo }}</p>
             </div>
         </div>
@@ -75,7 +75,7 @@
                 <div class="form-group mx-sm-3 mb-2">
                     <p> Teste</p>
                     <div class="d-flex">
-                        <textarea nome="conteudo" class="form-control" id="conteudo" placeholder="Comentar"></textarea>
+                        <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Comentar"></textarea>
                         <button type="submit" class="btn btn-outline-dark mx-2">Comentar</button>
                     </div>
                 </div>

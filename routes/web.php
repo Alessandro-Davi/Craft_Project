@@ -50,7 +50,7 @@ Route::get('/listar_publi/{id?}', [App\Http\Controllers\Listar_PubliController::
 Route::get('/listar_autor', [App\Http\Controllers\Listar_AutorController::class, 'autor'])->name('listar_autor');
 
 Route::post('/perfil/editar_perfil/{id}', [App\Http\Controllers\PerfilController::class, 'perfilUpdate'])->name('editar_perfil');
-Route::get('/perfil/{id?}', [App\Http\Controllers\PerfilController::class, 'autorPostagem'])->name('autorPostagem');
+Route::get('/perfil/{id}', [App\Http\Controllers\PerfilController::class, 'autorPostagem'])->name('autorPostagem');
 
 Route::get('/mostrar_postagem/{id}', [App\Http\Controllers\Mostrar_PostagemController::class, 'postagem'])->name('mostrar_postagem');
 // Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');

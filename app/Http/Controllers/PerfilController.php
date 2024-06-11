@@ -14,7 +14,7 @@ class PerfilController extends Controller
             $nomeAutor = $user->name;
             $emailAutor = $user->email;
             $biografiaAutor = $user->biografia;
-            $imagemAutor=$user->imagem;
+            $imagemAutor = $user->imagem;
             $postagens = Postagem::where('user_id', $id)->orderBy('id', 'DESC')->get();
             return view('perfil', ['user' => $user, 'postagens' => $postagens,  'nomeAutor' => $nomeAutor, 'emailAutor' =>  $emailAutor,'biografiaAutor' =>  $biografiaAutor ,'imagemAutor' =>  $imagemAutor ]);
 
@@ -28,12 +28,15 @@ class PerfilController extends Controller
             $imagem = $request->file('imagem');
 
             $user = User::find($id);
-            $user->imagem = base64_encode (file_get_contents ($imagem));
+            if ($imagem != null){
+                $user->imagem = base64_encode (file_get_contents ($imagem));
+            }
+
             $user->biografia = $request->biografia;
             $user->email = $request->email;
             $user->save();
 
-            return redirect('perfil')->with('status', 'Perfil atualizado com sucesso!');
+            return redirect('perfil/' . $id)->with('status', 'Perfil atualizado com sucesso!');
         }
     }
 

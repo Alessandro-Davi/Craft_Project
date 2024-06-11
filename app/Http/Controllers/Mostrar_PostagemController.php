@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Postagem;
 use App\Models\Comentario;
+use App\Models\User;
 
 class Mostrar_PostagemController extends Controller
 {
@@ -19,7 +20,8 @@ class Mostrar_PostagemController extends Controller
     public function postagem($id){
 
         $postagem = Postagem::find($id);
-        return view('mostrar_postagem' , ['postagem' => $postagem]);
+        $user = User::find($id);
+        return view('mostrar_postagem' , ['postagem' => $postagem, 'user' => $user]);
     }
 
 

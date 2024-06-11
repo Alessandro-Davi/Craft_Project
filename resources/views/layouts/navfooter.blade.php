@@ -63,7 +63,7 @@
                     @csrf
                     <ul class="dropdown-menu dropdown-menu-center">
 
-                        <li><a class="dropdown-item" href="">Perfil</a></li>
+                        <li><a class="dropdown-item" href="{{url ('/perfil/' . auth()->user()->id) }}">Perfil</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{url ('/logout') }}">Sair</a></li>
                     </ul>

@@ -5,7 +5,7 @@
     <img src="{{ url('./img/fundo_tela.png') }}" alt="Responsive image">
 
     <div class="container" style=" height: 130px;">
-        <img src="{{ $imagemAutor }}" class="rounded-circle pose" width="250" height="250" alt="Responsive image">
+        <img src="data:image/png;base64,{{ $user->imagem }}" class="rounded-circle pose" width="250" height="250" alt="Responsive image">
     </div>
 
 

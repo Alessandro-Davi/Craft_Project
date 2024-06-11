@@ -5,8 +5,7 @@
     <img src="{{ url('./img/fundo_tela.png') }}" alt="Responsive image">
 
     <div class="container" style=" height: 130px;">
-        <img src="{{ url('./img/teste1.jpg') }}" class="rounded-circle pose" width="250" height="250"
-            alt="Responsive image">
+        <img src="{{ $imagemAutor }}" class="rounded-circle pose" width="250" height="250" alt="Responsive image">
     </div>
 
 
@@ -14,31 +13,65 @@
 
         <h4>{{ $nomeAutor }}</h4>
 
-        <p> Lorem ipsum dolor sit amet. Sit consequatur magni aut itaque
-            facere rem quia nihil et eaque unde. Cum architecto repellat sed quisquam ducimus </p>
+        <p> {{ $biografiaAutor }} </p>
 
         <div class="d-flex justify-content-between">
             <p> {{ $emailAutor }}</p>
-            <button type="button" class="btn btn-outline-dark">Editar Perfil</button>
+            <button type="button" class="btn btn-outline-dark" data-bs-target="#editar_perfil" data-bs-toggle="modal"
+                data-bs-whatever="@user">Editar Perfil</button>
         </div>
 
 
+        <div class="modal fade" id="editar_perfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="font-family: 'Courier New', Courier, monospace; font-weight: 600"
+                            id="exampleModalLabel">Editar Perfil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
 
-<!-- Vertically centered modal -->
-<div class="modal-dialog modal-dialog-centered">
-    ...
-  </div>
+                        <form method="POST" action="{{ url('/perfil/editar_perfil/' . $user->id ) }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="mb-3">
+                                <label for="myfile">Selecione uma imagem</label>
+                                <div class="form-floating mb-3 mt-3 text-muted">
+                                    <input type="file" class="form-control" id="myfile" name="imagem">
+                                </div>
+
+                            </div>
+                            {{--  --}}
+                            <div class="mb-3">
+                                <div class="form-floating mb-3 mt-3 text-muted">
+                                    <label for="lname">Biografia</label>
+                                    <input type="text" class="form-control" id="lname" name="biografia" value="{{ $user->biografia}}">
+                                </div>
+                            </div>
+                            {{--  --}}
+                            <div class="mb-3">
+                                <div class="form-floating mb-3 mt-3 text-muted">
+                                    <label for="fname">Email</label>
+                                    <input type="text" id="fname" class="form-control" name="email" value="{{ $user->email}}">
+                                </div>
+                            </div>
 
 
-
-
-
-
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn fw-bold" value="Salvar">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <br>
 
         <ul class="profile-header-tab nav nav-tabs">
-            <li class="nav-item"><a href="#profile-post" class="nav-link active show" data-toggle="tab">POSTAGENS</a></li>
+            <li class="nav-item"><a href="#profile-post" class="nav-link active show" data-toggle="tab">POSTAGENS</a>
+            </li>
             <li class="nav-item"><a href="Profile_Fav.html" class="nav-link" data-toggle="tab">FAVORITOS</a></li>
         </ul>
     </div>

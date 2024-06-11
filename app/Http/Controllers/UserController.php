@@ -40,8 +40,6 @@ class UserController extends Controller
     }
 
 
-
-
     public function logout(Request $request): RedirectResponse {
 
         Auth::logout();

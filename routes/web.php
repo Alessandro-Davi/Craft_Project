@@ -48,7 +48,10 @@ Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->na
 Route::get('/pesquisar', [App\Http\Controllers\PesquisarController::class, 'index'])->name('pesquisar');
 Route::get('/listar_publi/{id?}', [App\Http\Controllers\Listar_PubliController::class, 'index'])->name('listar_publi');
 Route::get('/listar_autor', [App\Http\Controllers\Listar_AutorController::class, 'autor'])->name('listar_autor');
+
+Route::post('/perfil/editar_perfil/{id}', [App\Http\Controllers\PerfilController::class, 'perfilUpdate'])->name('editar_perfil');
 Route::get('/perfil/{id?}', [App\Http\Controllers\PerfilController::class, 'autorPostagem'])->name('autorPostagem');
+
 Route::get('/mostrar_postagem/{id}', [App\Http\Controllers\Mostrar_PostagemController::class, 'postagem'])->name('mostrar_postagem');
 // Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
 Route::get('/contato', [App\Http\Controllers\ContatoController::class, 'index'])->name('contato');
@@ -58,6 +61,7 @@ Route::post('mostrar_postagem/postagemComentario/{id}', [App\Http\Controllers\Mo
 Route::post('/login_usuario', [App\Http\Controllers\UserController::class, 'login'])->name('login_usuario');
 Route::post('/cadastrar_usuario', [App\Http\Controllers\UserController::class, 'cadastrar'])->name('cadastrar_usuario');
 Route::post('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout_usuario');
+
 
 
 // CRUD CATEGORIA

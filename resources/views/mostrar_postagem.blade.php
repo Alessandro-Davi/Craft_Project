@@ -27,11 +27,11 @@
                         <img src="data:image/png;base64,{{ $postagem->imagem }}" class="w-50" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="./img/Logo-Blog.png" class=" w-50" alt="...">
+                        <img src="data:image/png;base64,{!! $postagem->imagem !!}" class=" w-50" alt="...">
 
                     </div>
                     <div class="carousel-item">
-                        <img src="data:image/png;base64,{{ $postagem->imagem }}" class=" w-50" alt="...">
+                        <img src="data:image/png;base64,{!! $postagem->imagem !!}" class=" w-50" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
@@ -67,22 +67,29 @@
         </div>
 
         <hr>
-        <div class=" d-flex  align-items-center ">
-            <img src="data:image/png;base64,{{ auth()->user()->imagem }}" width="50" height="50" alt="Logomarca">
 
-            <form class="form-inline " method="post" action="{{ route('postagemComentario', $postagem->id) }}">
-                @csrf
-                <div class="form-group mx-sm-3 mb-2">
-                    <p> Teste</p>
-                    <div class="d-flex">
-                        <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Comentar"></textarea>
-                        <button type="submit" class="btn btn-outline-dark mx-2">Comentar</button>
-                    </div>
-                </div>
-            </form>
-
-        </div>
         <br>
+
+
+        @auth
+            <div class=" d-flex  align-items-center ">
+                <img src="data:image/png;base64,{{ auth()->user()->imagem }}" width="50" height="50" alt="Logomarca">
+
+                <form class="form-inline " method="post" action="{{ route('postagemComentario', $postagem->id) }}">
+                    @csrf
+                    <div class="form-group mx-sm-3 mb-2">
+                        <p> Teste</p>
+                        <div class="d-flex">
+                            <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Comentar"></textarea>
+                            <button type="submit" class="btn btn-outline-dark mx-2">Comentar</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        @endauth
+
+
 
         @foreach ($postagem->comentarios as $comentario)
             <div class=" d-flex  align-items-center ">

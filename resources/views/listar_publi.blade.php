@@ -17,9 +17,9 @@
                     <img src="data:image/png;base64,{{ $value->imagem }}" width="300" height="300" />
                 </div>
                 <div class="col-6 ms-3">
-                    <h4> {{ $value->titulo }} </h4>
+                    <h6> {{ $value->titulo }} </h6>
                     <br>
-                    <p> {!! $value->conteudo !!}</p>
+
                     <a href="{{ route('mostrar_postagem', ['id' => $postagem->id]) }}"> <button
                             class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
                     <br><br><br><br><br><br>

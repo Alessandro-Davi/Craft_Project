@@ -71,7 +71,7 @@
                         @csrf
                     </form>
                     <button type="button" class="btn dropdown-toggle border-0" data-bs-toggle="dropdown">
-                        <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
+                         <i class="fa-regular fa-user border border-3 border-dark rounded-circle"></i>
                     </button>
                     @endauth
 

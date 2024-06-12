@@ -4,7 +4,7 @@
     <div class="container">
 
         <div class="d-flex align-items-center">
-            <img src="./img/boy.png" width="50" height="50" alt="Logomarca">
+            <img src="data:image/png;base64,{{ $postagem->user->imagem }}" width="50" height="50" alt="Logomarca">
             <div class="m-3">
                 <p> {{ $postagem->user->name   }}</p>
                 <p> {{ $postagem->titulo }}</p>
@@ -24,14 +24,14 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="{{ $postagem->imagem }}" class="w-50" alt="...">
+                        <img src="data:image/png;base64,{{ $postagem->imagem }}" class="w-50" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
                         <img src="./img/Logo-Blog.png" class=" w-50" alt="...">
 
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ $postagem->imagem }}" class=" w-50" alt="...">
+                        <img src="data:image/png;base64,{{ $postagem->imagem }}" class=" w-50" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
@@ -51,7 +51,7 @@
 
 
 
-        <h3> {{ $postagem->conteudo }}</h3>
+        <h3> {!! $postagem->conteudo !!}</h3>
 
 
 
@@ -68,7 +68,7 @@
 
         <hr>
         <div class=" d-flex  align-items-center ">
-            <img src="data:image/png;base64,{{ $postagem->user->imagem }}" class="rounded-circle pose" width="50" height="50" alt="Logomarca">
+            <img src="data:image/png;base64,{{ auth()->user()->imagem }}"  width="50" height="50" alt="Logomarca">
 
             <form class="form-inline " method="post" action="{{ route('postagemComentario', $postagem->id) }}">
                 @csrf

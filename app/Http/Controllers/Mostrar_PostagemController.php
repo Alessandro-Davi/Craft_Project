@@ -21,7 +21,8 @@ class Mostrar_PostagemController extends Controller
 
         $postagem = Postagem::find($id);
         $user = User::find($id);
-        return view('mostrar_postagem' , ['postagem' => $postagem, 'user' => $user]);
+
+        return view('mostrar_postagem' , ['postagem' => $postagem, 'user' => $user, ]);
     }
 
 

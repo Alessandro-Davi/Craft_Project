@@ -1,30 +1,29 @@
 @extends('layouts.navfooter')
 
 @section('content')
-
     <div class="text-center">
-      <h3> Sobre </h3>
+        <h3> Sobre </h3>
     </div>
 
     <br> <br> <br>
 
-    <div class="container" >
+    <div class="container">
         <div class="row">
-          <div class="col">
-            <img src="{{url('./img/teste1.jpg')}}" style="width:400px"; class="card-img-top" alt="...">
-            <br><br>
-            <p> Alessandro Davi</p>
-          </div>
-          <div class="col">
-            <img src="{{url('./img/teste1.jpg')}}" style="width:400px"; class="card-img-top" alt="...">
-            <br><br>
-            <p> Patryck Nasc</p>
-          </div>
-          <div class="col" >
-            <img src="{{url('./img/teste1.jpg')}}"  style="width:400px"; class="card-img-top" alt="...">
-            <br><br>
-            <p> João Procopio </p>
-          </div>
+            <div class="col">
+                <img src="{{ url('./img/teste1.jpg') }}" style="width:400px"; class="card-img-top" alt="...">
+                <br><br>
+                <p> Alessandro Davi</p>
+            </div>
+            <div class="col">
+                <img src="{{ url('./img/teste1.jpg') }}" style="width:400px"; class="card-img-top" alt="...">
+                <br><br>
+                <p> Patryck Nasc</p>
+            </div>
+            <div class="col">
+                <img src="{{ url('./img/teste1.jpg') }}" style="width:400px"; class="card-img-top" alt="...">
+                <br><br>
+                <p> João Procopio </p>
+            </div>
         </div>
         <br><br>
         <div class="row">
@@ -36,8 +35,8 @@
                 sit vero vitae!
 
             </p>
-          </div>
+        </div>
 
     </div>
-<hr>
+    <hr>
 @endsection

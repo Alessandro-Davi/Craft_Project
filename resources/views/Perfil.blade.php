@@ -5,7 +5,8 @@
     <img src="{{ url('./img/fundo_tela.png') }}" alt="Responsive image">
 
     <div class="container" style=" height: 130px;">
-        <img src="data:image/png;base64,{{ $user->imagem }}" class="rounded-circle pose" width="250" height="250" alt="Responsive image">
+        <img src="data:image/png;base64,{{ $user->imagem }}" class="rounded-circle pose" width="250" height="250"
+            alt="Responsive image">
     </div>
 
 
@@ -32,7 +33,8 @@
                     </div>
                     <div class="modal-body">
 
-                        <form method="POST" action="{{ url('/perfil/editar_perfil/' . $user->id ) }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/perfil/editar_perfil/' . $user->id) }}"
+                            enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="myfile">Selecione uma imagem</label>
@@ -45,14 +47,16 @@
                             <div class="mb-3">
                                 <div class="form-floating mb-3 mt-3 text-muted">
                                     <label for="lname">Biografia</label>
-                                    <input type="text" class="form-control" id="lname" name="biografia" value="{{ $user->biografia}}">
+                                    <input type="text" class="form-control" id="lname" name="biografia"
+                                        value="{{ $user->biografia }}">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="mb-3">
                                 <div class="form-floating mb-3 mt-3 text-muted">
                                     <label for="fname">Email</label>
-                                    <input type="text" id="fname" class="form-control" name="email" value="{{ $user->email}}">
+                                    <input type="text" id="fname" class="form-control" name="email"
+                                        value="{{ $user->email }}">
                                 </div>
                             </div>
 

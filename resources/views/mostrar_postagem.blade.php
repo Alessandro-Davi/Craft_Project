@@ -6,7 +6,7 @@
         <div class="d-flex align-items-center">
             <img src="data:image/png;base64,{{ $postagem->user->imagem }}" width="50" height="50" alt="Logomarca">
             <div class="m-3">
-                <p> {{ $postagem->user->name   }}</p>
+                <p> {{ $postagem->user->name }}</p>
                 <p> {{ $postagem->titulo }}</p>
             </div>
         </div>
@@ -68,7 +68,7 @@
 
         <hr>
         <div class=" d-flex  align-items-center ">
-            <img src="data:image/png;base64,{{ auth()->user()->imagem }}"  width="50" height="50" alt="Logomarca">
+            <img src="data:image/png;base64,{{ auth()->user()->imagem }}" width="50" height="50" alt="Logomarca">
 
             <form class="form-inline " method="post" action="{{ route('postagemComentario', $postagem->id) }}">
                 @csrf
@@ -86,7 +86,8 @@
 
         @foreach ($postagem->comentarios as $comentario)
             <div class=" d-flex  align-items-center ">
-                <img src="data:image/png;base64,{{ $comentario->user->imagem }}" width="50" height="50" alt="Logomarca">
+                <img src="data:image/png;base64,{{ $comentario->user->imagem }}" width="50" height="50"
+                    alt="Logomarca">
 
                 <div class="form-group mx-sm-3 mb-2">
                     <p><strong> {{ $comentario->user->name }} </strong></p>

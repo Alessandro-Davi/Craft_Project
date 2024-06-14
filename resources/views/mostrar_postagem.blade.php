@@ -63,7 +63,7 @@
                 <a href=""> <i class="bi bi-heart p-2"></i></a> | {{$postagem->curtidas->count() }}
 
                 @auth
-                <br\> Curtir - <a href="{{url ('/listar_publi/curtida/' . $postagem->id)}}"> <i class="bi bi-heart p-2"></i></a>
+                Curtir - <a href="{{url ('/listar_publi/curtida/' . $postagem->id)}}"> <i class="bi bi-heart p-2"></i></a>
                 @endauth
                 <a href="{{url('/mostrar_postagem/' . $postagem->id)}}">  <i class="bi bi-chat-left p-2"></i></a>  | {{$postagem->comentarios->count()}}
 

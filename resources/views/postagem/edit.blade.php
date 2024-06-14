@@ -25,7 +25,7 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ url('/postagem/' . $postagem->id . '/edit') }}">
+                        <form method="POST" action="{{ url('/postagem/' . $postagem->id . '/edit') }}" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 

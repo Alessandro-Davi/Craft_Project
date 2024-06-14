@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Postagem;
-//use App\Models\Categoria;
+use App\Models\Categoria;
 //use App\Models\Nomecategoria;
 
 class Listar_PubliController extends Controller
@@ -15,11 +15,12 @@ class Listar_PubliController extends Controller
         $postagens = Postagem::where('categoria_id', $id)->paginate(5);
         //dd($postagens);
         $postagem = Postagem::find($id);
+        $categoria = Categoria::find($id);
 
-        return view('listar_publi', ['postagens' => $postagens , 'postagem' => $postagem]);
+        return view('listar_publi', ['postagens' => $postagens , 'postagem' => $postagem, 'categoria' => $categoria]);
 
         /*
-        $categoria = Categoria::find($id);
+
         $nomeCategoria = $categoria->nome;
         $categorias = Categoria::where('id', $id)->paginate(5);
 

@@ -85,15 +85,23 @@
         <div class="container">
             <div class="row mt-3">
                 <div class="col-6" style="width: 324px;">
-                    <img src="{{ url('./img/teste1.jpg') }}" width="300" height="300" alt="...">
+                    <img src="data:image/png;base64,{{ $value->imagem }}" width="300" height="300" alt="...">
                 </div>
                 <div class="col-6 ms-3">
                     <h4> {{ $value->titulo }} </h4>
                     <br>
-                    <p> {{ $value->conteudo }}</p>
-                    <button class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button>
-                    <br><br><br><br><br><br>
+                    {{-- <p> {{ $value->conteudo }}</p> --}}
+                    <a href="{{ route('mostrar_postagem', ['id' => $value->id]) }}"> <button
+                        class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
+                <br><br><br><br><br><br>
+                    <div class="d-flex justify-content-between">
+                    <div class="">
+                    <p> Comentários - {{$value->comentarios->count() }} </p>
+                    <p> Curtidas - {{$value->curtidas->count() }} </p>
+                    </div>
+
                     <i class="fa-2x bi bi-exclamation-triangle"></i>
+                    </div>
                 </div>
             </div>
         </div>

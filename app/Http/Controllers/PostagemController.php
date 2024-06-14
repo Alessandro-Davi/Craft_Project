@@ -95,14 +95,14 @@ class PostagemController extends Controller
         'conteudo' => 'required|min:5',
     ], $messages);
 
-
+    $imagem = $request->file('imagem');
 
         $postagem = Postagem::find($id);
         $postagem->titulo = $request->titulo;
         $postagem->conteudo = $request->conteudo;
         $postagem->user_id=$user_id;
         $postagem->categoria_id=$request->categoria_id;
-        $postagem->imagem =$request->imagem;
+        $postagem->imagem = base64_encode (file_get_contents ($imagem));
         $postagem->save();
 
        return redirect('postagem')->with('status', 'Postagem atualizada com sucesso');

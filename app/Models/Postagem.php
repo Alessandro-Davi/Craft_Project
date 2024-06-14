@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+
 class Postagem extends Model
 {
     use HasFactory;
@@ -24,5 +25,10 @@ class Postagem extends Model
     public function comentarios(): HasMany
     {
         return $this->hasMany(Comentario::class, 'postagem_id', 'id');
+    }
+
+    public function curtidas(): HasMany
+    {
+        return $this->hasMany(Curtida::class, 'postagem_id', 'id');
     }
 }

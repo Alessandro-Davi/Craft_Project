@@ -57,8 +57,9 @@
 
         <div class=" align-items-end d-flex justify-content-between ">
             <p id="Coment"> Deixe um comentário: </p>
+
             <hr>
-            <div class="  justify-content-end ">
+            <div class=" justify-content-end ">
                 <i class="bi bi-heart "></i>
                 <i class="bi bi-bookmark"></i>
 
@@ -67,7 +68,8 @@
         </div>
 
         <hr>
-
+        <p> Comentários - {{$postagem->comentarios->count() }} </p>
+        <p> Curtidas - {{$postagem->curtidas->count() }} </p>
         <br>
 
 

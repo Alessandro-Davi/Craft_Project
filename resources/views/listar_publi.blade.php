@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class=" text-center " id="titulo">
-            <h3>{{ $postagens->first()->categoria->nome }}</h3>
+            <h3>{{ $postagens->first()->categoria->nome ?? }} <br> ────</h3>
         </div>
     </div>
 
@@ -23,7 +23,14 @@
                     <a href="{{ route('mostrar_postagem', ['id' => $postagem->id]) }}"> <button
                             class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
                     <br><br><br><br><br><br>
-                    <i class="fa-2x bi bi-exclamation-triangle"></i>
+                    <div class="d-flex justify-content-between">
+                        <div class="">
+                        <p> Comentários - {{$value->comentarios->count() }} </p>
+                        <p> Curtidas - {{$value->curtidas->count() }} </p>
+                        </div>
+
+                        <i class="fa-2x bi bi-exclamation-triangle"></i>
+                        </div>
                 </div>
             </div>
         </div>

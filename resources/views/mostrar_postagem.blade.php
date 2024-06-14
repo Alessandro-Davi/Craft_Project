@@ -60,17 +60,20 @@
 
             <hr>
             <div class=" justify-content-end ">
-                <i class="bi bi-heart "></i>
-                <i class="bi bi-bookmark"></i>
+                <a href=""> <i class="bi bi-heart p-2"></i></a> | {{$postagem->curtidas->count() }}
+
+                @auth
+                <br\> Curtir - <a href="{{url ('/listar_publi/curtida/' . $postagem->id)}}"> <i class="bi bi-heart p-2"></i></a>
+                @endauth
+                <a href="{{url('/mostrar_postagem/' . $postagem->id)}}">  <i class="bi bi-chat-left p-2"></i></a>  | {{$postagem->comentarios->count()}}
+
 
             </div>
 
         </div>
 
         <hr>
-        <p> Comentários - {{$postagem->comentarios->count() }} </p>
-        <p> Curtidas - {{$postagem->curtidas->count() }} </p>
-        <br>
+
 
 
         @auth
@@ -80,7 +83,7 @@
                 <form class="form-inline " method="post" action="{{ route('postagemComentario', $postagem->id) }}">
                     @csrf
                     <div class="form-group mx-sm-3 mb-2">
-                        <p> Teste</p>
+                        <p> <strong>{{auth()->user()->name}}</strong></p>
                         <div class="d-flex">
                             <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Comentar"></textarea>
                             <button type="submit" class="btn btn-outline-dark mx-2">Comentar</button>

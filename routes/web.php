@@ -47,6 +47,9 @@ Route::get('/signinout',[App\Http\Controllers\LoginController::class,'destroy'])
 Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->name('sobre');
 Route::get('/pesquisar', [App\Http\Controllers\PesquisarController::class, 'index'])->name('pesquisar');
 Route::get('/listar_publi/{id?}', [App\Http\Controllers\Listar_PubliController::class, 'index'])->name('listar_publi');
+Route::get('/listar_publi/curtida/{id}', [App\Http\Controllers\Listar_PubliController::class, 'curtida'])->name('listar_publi/curtida')->middleware('auth');
+
+
 Route::get('/listar_autor', [App\Http\Controllers\Listar_AutorController::class, 'autor'])->name('listar_autor');
 
 Route::post('/perfil/editar_perfil/{id}', [App\Http\Controllers\PerfilController::class, 'perfilUpdate'])->name('editar_perfil');

@@ -22,11 +22,16 @@
 
                     <a href="{{ route('mostrar_postagem', ['id' => $postagem->id]) }}"> <button
                             class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
-                    <br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br>
                     <div class="d-flex justify-content-between">
-                        <div class="">
-                        <p> Comentários - {{$value->comentarios->count() }} </p>
-                        <p> Curtidas - {{$value->curtidas->count() }} </p>
+                        <div class="d-flex align-items-center ">
+                        <a href=""> <i class="bi bi-heart p-2"></i></a> | {{$value->curtidas->count() }}
+
+                        @auth
+                        | Curtir - <a href="{{url ('/listar_publi/curtida/' . $value->id)}}"> <i class="bi bi-heart p-2"></i></a>
+                        @endauth
+                        <a href="{{url('/mostrar_postagem/' . $value->id)}}">  <i class="bi bi-chat-left p-2"></i></a>  | {{$value->comentarios->count()}}
+
                         </div>
 
                         <i class="fa-2x bi bi-exclamation-triangle"></i>

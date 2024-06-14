@@ -5,10 +5,10 @@
 @section('content')
     <div class="container">
         <div class=" text-center " id="titulo">
-            <h3>{{ $postagens->first()->categoria->nome ?? }} <br> ────</h3>
+            <h3>{{ $categoria->nome }} <br> ────</h3>
         </div>
     </div>
-
+    {{-- $postagens->first() --}}
 
     @foreach ($postagens as $value)
         <div class="container">

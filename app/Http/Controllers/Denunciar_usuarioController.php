@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\DenunciaUsuario;
+use App\Models\Denunciar_usuario;
 
-class DenunciaUsuarioController extends Controller
+class Denunciar_usuarioController extends Controller
 {
     public function denuncia_usuario(Request $request)
     {
-        $denuncia_usuario = new DenunciaUsuario;
+        $denuncia_usuario = new Denunciar_usuario;
         $denuncia_usuario->denunciante_id = auth()->user()->id;
         $denuncia_usuario->denunciado_id = $request->denunciado_id;
         $denuncia_usuario->conteudo = $request->conteudo;
@@ -20,8 +20,8 @@ class DenunciaUsuarioController extends Controller
 
     public function index()
     {
-        $denuncia_usuario = DenunciaUsuario::get();
-        return view('denuncia.denuncia_usuario_index', ['denuncia_usuario' => $denuncia_usuario]);
+        $denuncia_usuario = Denunciar_usuario::get();
+        return view('denunciar.denuncia_usuario_index', ['denuncia_usuario' => $denuncia_usuario]);
     }
 
     public function create()
@@ -31,7 +31,7 @@ class DenunciaUsuarioController extends Controller
 
     public function store(Request $request)
     {
-        $denuncia_usuario = new DenunciaUsuario;
+        $denuncia_usuario = new Denunciar_usuario;
         $denuncia_usuario-> conteudo = $request -> conteudo;
         $denuncia_usuario-> save();
 
@@ -40,8 +40,8 @@ class DenunciaUsuarioController extends Controller
 
     public function show(string $id)
     {
-        $denuncia_usuario = DenunciaUsuario::find($id);
-        return view('denuncia.denuncia_usuario_show', ['denuncia_usuario' => $denuncia_usuario]);
+        $denuncia_usuario = Denunciar_usuario::find($id);
+        return view('denunciar.denuncia_usuario_show', ['denuncia_usuario' => $denuncia_usuario]);
     }
 
     public function edit(string $id)
@@ -56,7 +56,7 @@ class DenunciaUsuarioController extends Controller
 
     public function destroy(string $id)
     {
-        $denuncia_usuario = DenunciaUsuario::find($id);
+        $denuncia_usuario = Denunciar_usuario::find($id);
         $denuncia_usuario->delete();
         return redirect('denuncia_usuario')->with('status', 'Denúncia resolvida');
     }

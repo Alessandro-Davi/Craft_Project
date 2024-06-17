@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class DenunciaUsuario extends Model
+class Denunciar_usuario extends Model
 {
     use HasFactory;
     protected $table = 'denuncia_usuario';

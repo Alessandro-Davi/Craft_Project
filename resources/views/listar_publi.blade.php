@@ -71,8 +71,7 @@
                                                @csrf
                                                <div class="mb-3">
                                                    <label for="message-text"
-                                                       class="col-form-label">Lamentamos o incômodo
-                                                       que possa estar sentindo. <br>
+                                                       class="col-form-label"> <br>
                                                        Digite abaixo o motivo desta denúncia.</label>
                                                    <input type="hidden" name="denunciado_id"
                                                        value="{{ $value->user->id }}">
@@ -110,8 +109,7 @@
                                                @csrf
                                                <div class="mb-3">
                                                    <label for="message-text"
-                                                       class="col-form-label">Lamentamos o incômodo
-                                                       que possa estar sentindo. <br>
+                                                       class="col-form-label"> <br>
                                                        Digite abaixo o motivo desta denúncia.</label>
                                                    <input type="hidden" name="denunciado_id"
                                                        value="{{ $value->user->id }}">
@@ -135,7 +133,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
     @endforeach
 
     <div class="container">

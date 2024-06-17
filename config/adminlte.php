@@ -311,6 +311,18 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Denúncia Usuário',
+            'url'  => 'denuncia_usuario',
+            'icon' => 'fa-solid fa-triangle-exclamation',
+
+        ],
+        [
+            'text' => 'Denúncia Postagem',
+            'url'  => 'denuncia_postagem',
+            'icon' => 'fa-solid fa-triangle-exclamation',
+
+        ],
+        [
             'type' => 'navbar-search',
             'text' => 'search',
             'topnav_right' => true,

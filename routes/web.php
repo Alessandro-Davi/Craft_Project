@@ -68,19 +68,19 @@ Route::post('/logout', [App\Http\Controllers\UserController::class, 'logout'])->
 
 
 
-Route::post('/denuncia_usuario', [App\Http\Controllers\DenunciaUsuarioController::class, 'denuncia_usuario'])->middleware('can:is_admin')->name('denuncia_usuario');
-Route::get('/denuncia_usuario', [App\Http\Controllers\DenunciaUsuarioController::class, 'index'])->middleware('can:is_admin')->name('denuncia_usuario_index');
-Route::get('/denuncia_usuario/{id}', [App\Http\Controllers\DenunciaUsuarioController::class, 'show'])->middleware('can:is_admin')->name('denuncia_usuario_show');
-Route::post('/denuncia_usuario/store', [App\Http\Controllers\DenunciaUsuarioController::class, 'store'])->middleware('can:is_admin')->name('denuncia_usuario.store');
-Route::delete('/denuncia_usuario/{id}', [App\Http\Controllers\DenunciaUsuarioController::class, 'destroy'])->middleware('can:is_admin')->name('denuncia_usuario.destroy');
+Route::post('/denuncia_usuario', [App\Http\Controllers\Denunciar_usuarioController::class, 'denuncia_usuario'])->name('denuncia_usuario');
+Route::get('/denuncia_usuario', [App\Http\Controllers\Denunciar_usuarioController::class, 'index'])->name('denuncia_usuario_index');
+Route::get('/denuncia_usuario/{id}', [App\Http\Controllers\Denunciar_usuarioController::class, 'show'])->name('denuncia_usuario_show');
+Route::post('/denuncia_usuario/store', [App\Http\Controllers\Denunciar_usuarioController::class, 'store'])->name('denuncia_usuario.store');
+Route::delete('/denuncia_usuario/{id}', [App\Http\Controllers\Denunciar_usuarioController::class, 'destroy'])->name('denuncia_usuario.destroy');
 
-Route::post('/denuncia_postagem', [App\Http\Controllers\DenunciaPostagemController::class, 'denuncia_postagem'])->middleware('can:is_admin')->name('denuncia_postagem');
-Route::get('/denuncia_postagem', [App\Http\Controllers\DenunciaPostagemController::class, 'index'])->middleware('can:is_admin')->name('denuncia_postagem_index');
-Route::get('/denuncia_postagem/{id}', [App\Http\Controllers\DenunciaPostagemController::class, 'show'])->middleware('can:is_admin')->name('denuncia_postagem_show');
-Route::post('/denuncia_postagem/store', [App\Http\Controllers\DenunciaPostagemController::class, 'store'])->middleware('can:is_admin')->name('denuncia_postagem.store');
+Route::post('/denuncia_postagem', [App\Http\Controllers\Denunciar_postagemController::class, 'denuncia_postagem'])->name('denuncia_postagem');
+Route::get('/denuncia_postagem', [App\Http\Controllers\Denunciar_postagemController::class, 'index'])->name('denuncia_postagem_index');
+Route::get('/denuncia_postagem/{id}', [App\Http\Controllers\Denunciar_postagemController::class, 'show'])->name('denuncia_postagem_show');
+Route::post('/denuncia_postagem/store', [App\Http\Controllers\Denunciar_postagemController::class, 'store'])->name('denuncia_postagem.store');
 
 
-
+Route::post('/denuncia/justificativa', [App\Http\Controllers\Denunciar_postagemController::class, 'justificativa'])->name('justificativa');
 
 
 // CRUD CATEGORIA

@@ -21,6 +21,7 @@
 
 
   </head>
+
   <body>
 
 
@@ -64,8 +65,10 @@
                     <ul class="dropdown-menu dropdown-menu-center">
 
                         <li><a class="dropdown-item" href="{{url ('/perfil/' . auth()->user()->id) }}">Perfil</a></li>
-                        <li><a class="dropdown-item" href="{{url ('/login' ) }}">Admin</a></li>
+
+                        <li><a class="dropdown-item" href="">Criar publicação</a></li>
                         <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{url ('/login' ) }}">Admin</a></li>
                         <li><a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{url ('/logout') }}">Sair</a></li>
                     </ul>
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -131,7 +134,6 @@
           </div>
         </div>
         </footer>
-
 
 
         <footer class="justify-content-between py-3 border-top ">

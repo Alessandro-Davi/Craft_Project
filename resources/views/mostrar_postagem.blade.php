@@ -9,7 +9,114 @@
                 <p> {{ $postagem->user->name }}</p>
                 <p> {{ $postagem->titulo }}</p>
             </div>
+
+<!-- ICONE DENUNCIAR -->
+<i class="bi bi-exclamation-triangle text-danger ms-auto
+dropdown-toggle"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      <ul class="dropdown-menu">
+          <li><a class="dropdown-item" data-bs-toggle="modal"
+                  data-bs-target="#usuario" data-bs-whatever="@user"
+                  href="#">Denunciar Usuário</a>
+          </li>
+          <li><a class="dropdown-item" data-bs-toggle="modal"
+                  data-bs-target="#postagem" data-bs-whatever="@post"
+                  href="#">Denunciar Postagem</a>
+          </li>
+      </ul>
+  </i>
+
+  <!-- FORMULARIO  DENUNCIAR USUARIO -->
+  <div class="modal fade" id="usuario" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title"
+                      style="font-family: 'Courier New', Courier, monospace; font-weight: 600"
+                      id="exampleModalLabel">Denunciar Usuário</h5>
+                  <button type="button" class="btn-close"
+                      data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                  <form method="POST"
+                      action="{{ url('denuncia_usuario') }}">
+                      @csrf
+                      <div class="mb-3">
+                          <label for="message-text"
+                              class="col-form-label"> <br>
+                              Digite abaixo o motivo desta denúncia.</label>
+                          <input type="hidden" name="denunciado_id"
+                              value="{{ $postagem->user->id }}">
+                          <textarea class="form-control" id="message-text" name="conteudo"></textarea>
+                      </div>
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                      data-bs-dismiss="modal">Fechar</button>
+                  <button type="submit" class="btn fw-bold"
+                      value="Salvar">Enviar</button>
+              </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <!--      FORMULARIO  DENUNCIAR POSTAGEM        -->
+  <div class="modal fade" id="postagem" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title"
+                      style="font-family: 'Courier New', Courier, monospace; font-weight: 600"
+                      id="exampleModalLabel">Denunciar Postagem</h5>
+                  <button type="button" class="btn-close"
+                      data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                  <form method="POST"
+                      action="{{ url('denuncia_postagem') }}">
+                      @csrf
+                      <div class="mb-3">
+                          <label for="message-text"
+                              class="col-form-label"> <br>
+                              Digite abaixo o motivo desta denúncia.</label>
+                          <input type="hidden" name="denunciado_id"
+                              value="{{ $postagem->user->id }}">
+                          <input type="hidden" name="postagem_id"
+                              value="{{ $postagem->id }}">
+                          <textarea class="form-control" id="message-text" name="conteudo"></textarea>
+                      </div>
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                      data-bs-dismiss="modal">Fechar</button>
+                  <button type="submit" class="btn fw-bold"
+                      value="Salvar">Enviar</button>
+              </div>
+              </form>
+          </div>
+      </div>
+  </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <div class="imagem-p">

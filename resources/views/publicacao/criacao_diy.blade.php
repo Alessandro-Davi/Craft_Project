@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Postagem</div>
+                <div class="card-header">Sua publicações!</div>
 
                 <div class="card-body">
 

@@ -42,6 +42,9 @@
                 <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('listar_autor') }}">Autores</a>
                   </li>
+                  <li class="nav-item ps-5">
+                    <a class="nav-link" href="{{ route('criacao_diy') }}">Publicar</a>
+                </li>
                 <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('contato') }}">Contato</a>
                   </li>
@@ -49,9 +52,7 @@
                     <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
                   </li>
 
-                  <li class="nav-item ps-5">
-                    <a class="nav-link" href="{{ route('criacao_diy') }}">Criar publicação</a>
-                </li>
+
               </ul>
               <form class="d-flex ms-auto nav-item search-form">
                 <div class="search-wrapper">

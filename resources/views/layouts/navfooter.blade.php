@@ -19,6 +19,20 @@
     <script src="nav.js"></script>
     <script src="https://kit.fontawesome.com/4d548a4e76.js" crossorigin="anonymous"></script>
 
+        <style>
+            body {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 15.5px); /* Faz com que o corpo da página ocupe pelo menos toda a altura da viewport */
+            margin: 0;
+            padding: 0;
+            }
+
+            .flex {
+                flex: 1
+            }
+
+        </style>
 
   </head>
 
@@ -102,14 +116,11 @@
           </div>
     </nav>
 
-      <br>
-
-
+    <div class="flex">
       @yield('content')
+    </div>
 
-
-
-    <footer class="afooter justify-content-between py-3 my-4 border-top">
+    <footer class="afooter justify-content-between py-3 my-1 border-top">
         <div class="row  ">
           <div class="col">
             <p>Fale conosco</p>
@@ -140,9 +151,8 @@
         </div>
         </footer>
 
-
-        <footer class="justify-content-between py-3 border-top ">
-      <div class="d-flex justify-content-center">
+        <footer class="border-top ">
+      <div class="d-flex justify-content-center zerar-margem">
       <p>&copy; 2024 Company, Inc - Alessandro Davi, Patryck Nasc e João Procópio</p>
       </div>
         </footer>

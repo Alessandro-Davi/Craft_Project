@@ -60,6 +60,9 @@
                     <a class="nav-link" href="{{ route('criacao_diy') }}">Publicar</a>
                 </li>
                 <li class="nav-item ps-5">
+                  <a class="nav-link" href="{{ route('pesquisar') }}">Pesquisar</a>
+                </li>
+                <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('contato') }}">Contato</a>
                   </li>
                   <li class="nav-item ps-5">
@@ -71,9 +74,7 @@
               <form class="d-flex ms-auto nav-item search-form">
                 <div class="search-wrapper">
                   <input class="form-control me-2 p-1 ps-2" type="text" placeholder="Pesquisar">
-                  <button type="submit" class="search-button">
-                    <i class="fa fa-search"></i>
-                  </button>
+                 <a href="{{ route('pesquisar') }}">  <button  type="submit" class="search-button"> <i class="fa fa-search" ></i> </button></a>
                 </div>
               </form>
 
@@ -115,6 +116,8 @@
             </div>
           </div>
     </nav>
+
+    <br>
 
     <div class="flex">
       @yield('content')

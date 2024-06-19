@@ -10,6 +10,7 @@
                         <strong> Nome:</strong> {{ $mensagem->name }}<br>
                         <strong> Email:</strong> {{ $mensagem->email }}<br>
                         <strong> Conteudo:</strong> {{$mensagem->mensagem }}<br>
+
                         <strong> Criação:</strong>
                         {{ \Carbon\Carbon::parse($mensagem->created_at)->format('d/m/Y h:i:s') }}<br>
 

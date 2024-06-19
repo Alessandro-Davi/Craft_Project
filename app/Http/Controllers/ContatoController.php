@@ -36,7 +36,7 @@ class ContatoController extends Controller
     {
 
         $mensagens = Mensagem::orderBy('created_at', 'desc')->get();
-        return view('mensagem.mensagem_index', ['mensagens' => $mensagens, ]);
+        return view('mensagem.mensagem_index', ['mensagens' => $mensagens]);
     }
 
     public function create()

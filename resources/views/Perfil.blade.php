@@ -199,7 +199,7 @@
 
     <div class="container">
 
-        {{-- $postagens->links() --}}
+       $postagens->links()
 
     </div>
 @endsection

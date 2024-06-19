@@ -48,6 +48,10 @@
                   <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
                   </li>
+
+                  <li class="nav-item ps-5">
+                    <a class="nav-link" href="{{ route('criacao_diy') }}">Criar publicação</a>
+                </li>
               </ul>
               <form class="d-flex ms-auto nav-item search-form">
                 <div class="search-wrapper">
@@ -66,7 +70,7 @@
 
                         <li><a class="dropdown-item" href="{{url ('/perfil/' . auth()->user()->id) }}">Perfil</a></li>
 
-                        <li><a class="dropdown-item" href="">Criar publicação</a></li>
+
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{url ('/login' ) }}">Admin</a></li>
                         <li><a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{url ('/logout') }}">Sair</a></li>

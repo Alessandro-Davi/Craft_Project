@@ -83,9 +83,9 @@ Route::post('/denuncia_postagem/store', [App\Http\Controllers\Denunciar_postagem
 Route::post('/denuncia/justificativa', [App\Http\Controllers\Denunciar_postagemController::class, 'justificativa'])->name('justificativa');
 
 
-// CRUD CATEGORIA
 
-// LISTAR
+
+  // -------------------------------CRUD CATEGORIA ----------------------------------------
 
 Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
 
@@ -112,7 +112,7 @@ Route::put('/categoria/{id}/edit' , [CategoriaController::class, 'update'])->nam
 Route::delete('/categoria/{id}' , [CategoriaController::class, 'destroy'])->name('categoria.destroy');
 
 
-//POSTAGEM
+ // -------------------------------CRUD POSTAGEM ----------------------------------------
 
 // LISTAR
 
@@ -144,3 +144,21 @@ Route::delete('/postagem/{id}' , [PostagemController::class, 'destroy'])->name('
 // BLOG
 
 Route::get('/blog/categria/{id}', [BlogController::class, 'categoriaPostagem'])->name('blog.categoriaPostagem');
+
+ // -------------------------------CRUD PUBLICAÇÃO ----------------------------------------
+
+Route::get('/publicar', [App\Http\Controllers\PublicacaoController::class, 'index'])->name('formulario');
+
+Route::get('/publicacao/create', [App\Http\Controllers\PublicacaoController::class, 'create'])->name('publicacao.create');
+
+Route::post('/publicacao/create', [App\Http\Controllers\PublicacaoController::class, 'store'])->name('publicacao.store');
+
+Route::get('/publicacao/{id}', [App\Http\Controllers\PublicacaoController::class, 'show'])->name('publicacao.show');
+
+Route::get('/publicacao/{id}/edit', [App\Http\Controllers\PublicacaoController::class, 'edit'])->name('publicacao.edit');
+
+Route::put('/publicacao/{id}/edit', [App\Http\Controllers\PublicacaoController::class, 'update'])->name('publicacao.update');
+
+Route::delete('/publicacao/{id}', [App\Http\Controllers\PublicacaoController::class, 'destroy'])->name('publicacao.destroy');
+
+Route::get('/criacao_diy', [App\Http\Controllers\PublicacaoController::class, 'indexUsuario'])->name('criacao_diy');

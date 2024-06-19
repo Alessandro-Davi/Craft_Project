@@ -323,6 +323,12 @@ return [
 
         ],
         [
+            'text' => 'Mensagens',
+            'url'  => 'mensagens',
+            'icon' => 'fa-solid fa-triangle-exclamation',
+
+        ],
+        [
             'type' => 'navbar-search',
             'text' => 'search',
             'topnav_right' => true,

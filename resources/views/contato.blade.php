@@ -19,7 +19,8 @@
                         <div id="form-message-success" class="mb-4">
                             {{-- Sua mensagem foi enviada, obrigado! --}}
                         </div>
-                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                        <form method="POST" action="{{ route('enviar_mensagem') }}" id="contactForm" name="contactForm" class="contactForm" >
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -37,8 +38,8 @@
                                 </div>
                                 <div class="col-md-12 mt-2">
                                     <div class="form-group">
-                                        <label class="label" for="#">Mensagem:</label>
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Mensagem"></textarea>
+                                        <label class="label" for="mensagem">Mensagem:</label>
+                                        <textarea name="mensagem" class="form-control" id="mensagem" cols="30" rows="4" placeholder="Mensagem"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">

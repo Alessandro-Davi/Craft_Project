@@ -65,7 +65,10 @@ Route::post('/login_usuario', [App\Http\Controllers\UserController::class, 'logi
 Route::post('/cadastrar_usuario', [App\Http\Controllers\UserController::class, 'cadastrar'])->name('cadastrar_usuario');
 Route::post('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout_usuario');
 
-
+Route::post('/enviar_mensagem', [App\Http\Controllers\ContatoController::class, 'enviarMensagem'])->name('enviar_mensagem');
+Route::get('/mensagens', [App\Http\Controllers\ContatoController::class, 'listarMensagens'])->name('listar_mensagens');
+Route::get('/mensagens/{id}', [App\Http\Controllers\ContatoController::class, 'show'])->name('mensagens_show');
+Route::delete('/mensagens/{id}', [App\Http\Controllers\ContatoController::class, 'destroy'])->name('mensagens_destroy');
 
 
 Route::post('/denuncia_usuario', [App\Http\Controllers\Denunciar_usuarioController::class, 'denuncia_usuario'])->name('denuncia_usuario');
@@ -144,6 +147,7 @@ Route::delete('/postagem/{id}' , [PostagemController::class, 'destroy'])->name('
 // BLOG
 
 Route::get('/blog/categria/{id}', [BlogController::class, 'categoriaPostagem'])->name('blog.categoriaPostagem');
+
 
  // -------------------------------CRUD PUBLICAÇÃO ----------------------------------------
 

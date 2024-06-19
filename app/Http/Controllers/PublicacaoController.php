@@ -12,16 +12,15 @@ class PublicacaoController extends Controller
     public function indexUsuario()
     {
         $perfil = auth()->user();
-        $postagens = Postagem::orderBy('id', 'DESC')->where('user_id', $perfil->id)->get();
+        $postagens = Postagem::orderBy('id', 'ASC')->where('user_id', $perfil->id)->get();
         $categorias = Categoria::orderBy('nome', 'ASC')->get();
-        $receitas = Postagem::where('user_id', $perfil->id)->get();
-        //dd($receitas);
-        return view('publicacao.criacao_diy', ['categorias' => $categorias, 'receitas' => $receitas, 'perfil' => $perfil, 'postagens' => $postagens]);
+
+        return view('publicacao.criacao_diy', ['categorias' => $categorias, 'perfil' => $perfil, 'postagens' => $postagens]);
     }
 
     public function index()
     {
-        $postagens=Postagem::orderBy('titulo', 'ASC')->get();
+        $postagens=Postagem::orderBy('id', 'DESC')->get();
         $categorias=Categoria::orderBy('nome', 'ASC')->get();
         return view('publicacao.publicar', ['postagens' =>$postagens, 'categorias' => $categorias]);
     }
@@ -31,7 +30,7 @@ class PublicacaoController extends Controller
      */
     public function create()
     {
-         $categorias=Categoria::orderBy('nome', 'ASC')->get();
+         $categorias=Categoria::orderBy('id', 'DESC')->get();
          $postagens=Postagem::orderBy('titulo', 'ASC')->get();
         return view('publicacao.publicar', ['categorias' => $categorias, 'postagens' =>$postagens]);
     }
@@ -88,7 +87,7 @@ class PublicacaoController extends Controller
     public function edit(string $id)
     {
          $postagem = Postagem::find($id);
-         $categorias=Categoria::orderBy('nome', 'ASC')->get();
+         $categorias= Categoria::orderBy('nome', 'ASC')->get();
          return view('publicacao.editar', ['postagem' => $postagem, 'categorias' => $categorias]);
     }
 
@@ -132,7 +131,7 @@ class PublicacaoController extends Controller
     public function destroy(string $id)
     {
 
-        $postagem=Postagem::find($id);
+        $postagem= Postagem::find($id);
          $postagem->delete();
 
       return redirect('/criacao_diy')->with('status', 'Postagem excluida com sucesso');

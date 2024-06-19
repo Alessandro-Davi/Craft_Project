@@ -42,7 +42,7 @@
                         <input type="text" class="form-control" name="titulo"><br>
 
                         <label for="fname">Conteudo:</label><br>
-                        <textarea id="inp_editor1" class="form-control" name="conteudo">
+                        <textarea id="inp_editor1" class="form-control" name="conteudo" >
                         </textarea>
                         <label for="fname">Imagem:</label><br>
                         <input type="file" id="imagem" name="imagem">
@@ -51,9 +51,14 @@
                     <script>
                         var editor1 = new RichTextEditor("#inp_editor1");
                     </script>
+
+
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+<br><br><br><br>
 @endsection
+

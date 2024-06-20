@@ -37,7 +37,7 @@
                             enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <label for="myfile">Selecione uma imagem</label>
+                                <label for="myfile">Selecione uma imagem:</label>
                                 <div class="form-floating mb-3 mt-3 text-muted">
                                     <input type="file" class="form-control" id="myfile" name="imagem">
                                 </div>
@@ -46,15 +46,15 @@
                             {{--  --}}
                             <div class="mb-3">
                                 <div class="form-floating mb-3 mt-3 text-muted">
-                                    <label for="lname">Biografia</label>
+                                    <label for="lname">Biografia:</label><br><br>
                                     <input type="text" class="form-control" id="lname" name="biografia"
                                         value="{{ $user->biografia }}">
                                 </div>
                             </div>
                             {{--  --}}
-                            <div class="mb-3">
+                            <div class="mb-3"><br>
                                 <div class="form-floating mb-3 mt-3 text-muted">
-                                    <label for="fname">Email</label>
+                                    <label  for="fname">E-mail:</label><br><br>
                                     <input type="text" id="fname" class="form-control" name="email"
                                         value="{{ $user->email }}">
                                 </div>
@@ -83,8 +83,11 @@
 
     @foreach ($postagens as $value)
         <div class="container">
+            <br>
             <div class="row">
+
                 <div class="col-6 " style="width: 324px;">
+
                     <img src="data:image/png;base64,{{ $value->imagem }}" width="300" height="300" />
                 </div>
                 <div class="col-6 ms-3">
@@ -172,6 +175,7 @@
 
                                         <form method="POST" action="{{ url('denuncia_postagem') }}">
                                             @csrf
+
                                             <div class="mb-3">
                                                 <label for="message-text" class="col-form-label"> <br>
                                                     Digite abaixo o motivo desta denúncia.</label>
@@ -199,7 +203,8 @@
 
     <div class="container">
 
-       $postagens->links()
+
 
     </div>
+    <hr>
 @endsection

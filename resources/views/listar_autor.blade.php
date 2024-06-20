@@ -56,7 +56,7 @@ a{
             </article>
         @endforeach
 
-
+        <hr>
 
 
 @endsection

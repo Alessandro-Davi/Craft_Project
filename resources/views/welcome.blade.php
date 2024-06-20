@@ -128,6 +128,7 @@
                 </div>
             </div>
         </div>
-        <hr>
+
     </div>
+    <hr>
 @endsection

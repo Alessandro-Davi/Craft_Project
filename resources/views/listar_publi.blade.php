@@ -20,7 +20,7 @@
                     <h6> {{ $value->titulo }} </h6>
                     <br>
 
-                    <a href="{{ route('mostrar_postagem', ['id' => $postagem->id]) }}"> <button
+                    <a href="{{ route('mostrar_postagem', ['id' => $value->id]) }}"> <button
                             class="btn btn-outline-dark me-5" type="submit">Visitar Publicação</button></a>
                     <br><br><br><br><br><br><br>
                     <div class="d-flex justify-content-between">

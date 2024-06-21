@@ -22,6 +22,10 @@ Então, junte-se a nós nesta jornada emocionante pelo mundo do artesanato. Expl
 
             </p>
         </div><br><br>
+
+        <div class="text-center">
+            <h3> Desenvolvedores <br> ───────</h3>
+        </div>
         <div class="row">
             <div class="col-4"style="text-align: center">
                 <img src="{{ url('./img/imagem_Ale.jpg') }}" style="width:300px" ; class="card-img-top" alt="...">

@@ -17,7 +17,7 @@ class PerfilController extends Controller
             $emailAutor = $user->email;
             $biografiaAutor = $user->biografia;
             $imagemAutor = $user->imagem;
-            $postagens = Postagem::where('user_id', $id)->orderBy('id', 'DESC')->get();
+            $postagens = Postagem::where('user_id', $id)->orderBy('id', 'DESC')->paginate(5);
             return view('perfil', ['user' => $user, 'postagens' => $postagens,  'nomeAutor' => $nomeAutor, 'emailAutor' =>  $emailAutor,'biografiaAutor' =>  $biografiaAutor ,'imagemAutor' =>  $imagemAutor ]);
 
         }

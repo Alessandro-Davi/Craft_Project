@@ -57,9 +57,11 @@
                     <a class="nav-link" href="{{ route('sobre') }}">Sobre</a>
                   </li>
 
+                @auth
                 <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('criacao_diy') }}">Publicar</a>
                 </li>
+                @endauth
 
                 <li class="nav-item ps-5">
                     <a class="nav-link" href="{{ route('listar_autor') }}">Autores</a>

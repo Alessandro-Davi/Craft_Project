@@ -10,6 +10,7 @@
                 <p> {{ $postagem->titulo }}</p>
             </div>
 
+            @auth
 <!-- ICONE DENUNCIAR -->
 <i class="bi bi-exclamation-triangle text-danger ms-auto
 dropdown-toggle"
@@ -102,8 +103,9 @@ dropdown-toggle"
               </form>
           </div>
       </div>
+
   </div>
-        </div>
+  @endauth    </div>
 
 
 

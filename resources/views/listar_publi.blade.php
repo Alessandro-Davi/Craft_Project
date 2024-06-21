@@ -36,6 +36,7 @@
 
                         </div>
 
+                        @auth
                          <!-- ICONE DENUNCIAR -->
                          <i class="bi bi-exclamation-triangle text-danger ms-auto
                          dropdown-toggle"
@@ -129,7 +130,7 @@
                                    </div>
                                </div>
                            </div>
-
+                           @endauth
                        </div>
                     </div>
                 </div>
